@@ -1,115 +1,117 @@
 ---
-name: skill-name-here
-description: A clear, one-line description of what this skill does and when to use it
+name: skill-name
+description: A brief description of what this skill does (1-2 sentences)
 version: 1.0.0
-author: your-github-username
+author: Your Name or GitHub username
 license: MIT
+tags: [category1, category2]
 ---
 
-# Skill Name Here
+# Skill Name
 
 ## Overview
 
-[2-3 sentences explaining what this skill does and who it's for]
+Describe what this skill does and the problem it solves.
 
-**What I can do:**
-- [Capability 1]
-- [Capability 2]
-- [Capability 3]
+**Use Cases:**
+- Use case 1
+- Use case 2
+- Use case 3
 
-**What I cannot do:**
-- [Limitation 1]
-- [Limitation 2]
+## How to Use
 
----
+1. Upload your document (supported formats: PDF, DOCX, images)
+2. Ask Claude to [specific action]
+3. Review the output and ask follow-up questions
 
-## How to Use Me
-
-### Step 1: [First Step]
-[Explain what the user should provide]
-
-### Step 2: [Second Step]
-[Explain what you'll do]
-
-### Step 3: [Third Step]
-[Explain what comes next]
-
----
+**Example prompts:**
+- "Review this [document type] and identify [specific concern]"
+- "Generate a [output type] based on [input]"
+- "Analyze this [document] for [specific aspect]"
 
 ## Domain Knowledge
 
-[This is where you embed the expertise that makes your skill valuable]
+### Key Concepts
 
-### [Knowledge Category 1]
+Document the professional knowledge embedded in this skill:
 
-#### [Subtopic]
-- **Key Point**: [Explanation]
-- **Key Point**: [Explanation]
+**Concept 1: Title**
+- Detail 1
+- Detail 2
+- Detail 3
 
-### [Knowledge Category 2]
+**Concept 2: Title**
+- Detail 1
+- Detail 2
 
-| Item | Description | Recommendation |
-|------|-------------|----------------|
-| [Item 1] | [What it is] | [What to do] |
-| [Item 2] | [What it is] | [What to do] |
+### Checklists / Patterns
 
----
+If applicable, include checklists or patterns the skill uses:
+
+| Item | What to Check | Risk Level |
+|------|---------------|------------|
+| Item 1 | Description | High/Medium/Low |
+| Item 2 | Description | High/Medium/Low |
+
+### Regional Variations (if applicable)
+
+**United States**
+- Relevant US-specific information
+- Key regulations or standards
+
+**European Union**
+- Relevant EU-specific information
+- GDPR or other regulations
+
+**Other Regions**
+- Add as needed
 
 ## Output Format
 
-When I help you, I'll provide:
+Describe the expected output structure:
 
 ```
-## [Output Title]
+## Summary
+[Brief summary of findings]
 
-### Section 1
-[What this section contains]
+## Detailed Analysis
+[Main content]
 
-### Section 2
-[What this section contains]
-
-### Summary
-[Final recommendations or conclusions]
+## Recommendations
+[Actionable next steps]
 ```
-
----
 
 ## Examples
 
 ### Example 1: [Scenario Name]
 
-**User**: [What the user might say]
+**Input:**
+> User uploads [document type] and asks: "[example prompt]"
 
-**Me**: [How you would respond - abbreviated version]
+**Output:**
+> Claude provides [description of expected output]
 
 ### Example 2: [Scenario Name]
 
-**User**: [What the user might say]
+**Input:**
+> "[example prompt]"
 
-**Me**: [How you would respond - abbreviated version]
-
----
-
-## Tips for Better Results
-
-1. [Tip 1 for users]
-2. [Tip 2 for users]
-3. [Tip 3 for users]
-
----
+**Output:**
+> [Expected response]
 
 ## Limitations
 
-- [Honest limitation 1]
-- [Honest limitation 2]
-- [When to seek professional help]
+Be clear about what this skill cannot do:
 
----
+- Limitation 1 (e.g., "Not a substitute for professional legal advice")
+- Limitation 2 (e.g., "May not cover all jurisdictions")
+- Limitation 3
 
-## Languages
+## Changelog
 
-[List supported languages if applicable]
+- **v1.0.0** - Initial release
 
----
+## References
 
-*[Attribution or community note]*
+- [Reference 1](https://example.com)
+- [Reference 2](https://example.com)

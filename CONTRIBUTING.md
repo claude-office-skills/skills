@@ -118,6 +118,29 @@ Found a bug or improvement for an existing skill?
 3. Test before and after
 4. Document what you changed in the PR
 
+## Skill Ideas
+
+Looking for inspiration? Here are skills the community has requested:
+
+### High Priority
+- **Meeting Notes** - Transform raw meeting notes into structured summaries
+- **Expense Report** - Organize and categorize business expenses
+- **Email Drafter** - Professional email templates and responses
+- **Financial Model** - DCF and valuation templates
+
+### Medium Priority
+- **Presentation Script** - Create compelling presentation narratives
+- **Project Brief** - Define project scope and requirements
+- **Weekly Report** - Consistent status update generator
+- **Data Dictionary** - Document database schemas and fields
+
+### Low Priority (Research Needed)
+- **Compliance Checker** - Check documents against regulatory requirements
+- **Grant Proposal** - Write grant applications
+- **Patent Claims** - Draft patent claim language
+
+Pick one and start contributing!
+
 ## Questions?
 
 - Open an [Issue](https://github.com/claude-office-skills/skills/issues) for bugs or feature requests

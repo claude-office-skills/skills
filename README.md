@@ -5,34 +5,85 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Skills](https://img.shields.io/badge/Skills-15+-blue.svg)](#skills)
 
-## What is this?
+---
 
-**Claude Office Skills** is a community-driven collection of ready-to-use skills that help Claude handle real office tasks - contracts, invoices, resumes, proposals, and more.
+## Contents
+
+- [What Are Claude Skills?](#what-are-claude-skills)
+- [Getting Started](#getting-started)
+- [Skills](#skills)
+  - [Legal & Contracts](#legal--contracts)
+  - [HR & Careers](#hr--careers)
+  - [Finance & Business](#finance--business)
+  - [Communication & Writing](#communication--writing)
+  - [Productivity](#productivity)
+  - [Document Processing](#document-processing)
+- [Creating Skills](#creating-skills)
+- [Advanced Usage](#advanced-usage)
+- [Contributing](#contributing)
+- [Resources](#resources)
+
+---
+
+## What Are Claude Skills?
+
+**Claude Skills** are customizable workflows that teach Claude how to perform specific tasks according to your unique requirements. Skills enable Claude to execute tasks in a repeatable, standardized manner.
 
 Unlike generic AI prompts, these skills contain **embedded domain knowledge** and **professional workflows** that make Claude genuinely useful for business tasks.
 
-## Quick Start (30 seconds)
+**This repository focuses on Office & Business scenarios:**
+- Contracts, invoices, proposals
+- HR documents, resumes, offer letters
+- Reports, presentations, emails
+- Data analysis and document processing
 
-**Option 1: Copy & Paste**
+---
+
+## Getting Started
+
+### Using Skills in Claude.ai
+
 1. Click any skill below
 2. Copy the `SKILL.md` content
 3. Paste into your Claude conversation
 4. Upload your document and ask for help
 
-**Option 2: Direct Link**
+### Using Skills in Claude Code
+
+```bash
+# Place the skill in your skills directory
+mkdir -p ~/.config/claude-code/skills/
+cp -r contract-review ~/.config/claude-code/skills/
+
+# Start Claude Code - skill loads automatically
+claude
+```
+
+### Using Skills via Direct Link
+
 ```
 Please use this skill: https://raw.githubusercontent.com/claude-office-skills/skills/main/contract-review/SKILL.md
 
 Then review my contract: [upload file]
 ```
 
-**Option 3: Claude Desktop/Code**
-Add to your Claude configuration:
-```json
-{
-  "skills": ["https://github.com/claude-office-skills/skills/tree/main/contract-review"]
-}
+### Using Skills via API
+
+```python
+import anthropic
+
+client = anthropic.Anthropic(api_key="your-api-key")
+
+# Load skill content
+skill_content = open("contract-review/SKILL.md").read()
+
+response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    system=skill_content,
+    messages=[{"role": "user", "content": "Review this contract..."}]
+)
 ```
 
 ---
@@ -41,77 +92,139 @@ Add to your Claude configuration:
 
 ### Legal & Contracts
 
-| Skill | Description | Use Case |
-|-------|-------------|----------|
-| [**Contract Review**](./contract-review/) | Analyze contracts for risks, check completeness, get recommendations | Freelancers, small business, anyone signing contracts |
-| [**NDA Generator**](./nda-generator/) | Create professional NDAs for different scenarios | Startups, consultants, business meetings |
-| [**Privacy Policy**](./privacy-policy/) | Generate GDPR/CCPA compliant privacy policies | App developers, website owners |
-| [**Terms of Service**](./terms-of-service/) | Create fair, legally-sound ToS | SaaS founders, platform builders |
+| Skill | Description | Department | Link |
+|-------|-------------|------------|------|
+| **Contract Review** | Analyze contracts for risks, check completeness, get recommendations | Legal | [View](./contract-review/) |
+| **NDA Generator** | Create professional NDAs for different scenarios | Legal | [View](./nda-generator/) |
+| **Privacy Policy** | Generate GDPR/CCPA compliant privacy policies | Legal/Compliance | Planned |
+| **Terms of Service** | Create fair, legally-sound ToS | Legal | Planned |
 
 ### HR & Careers
 
-| Skill | Description | Use Case |
-|-------|-------------|----------|
-| [**Resume Tailor**](./resume-tailor/) | Optimize resume for specific job applications | Job seekers, career changers |
-| [**Cover Letter**](./cover-letter/) | Write compelling, personalized cover letters | Job applicants |
-| [**Job Description**](./job-description/) | Create clear, inclusive job postings | Hiring managers, HR |
-| [**Offer Letter**](./offer-letter/) | Generate professional employment offers | Startups, HR teams |
+| Skill | Description | Department | Link |
+|-------|-------------|------------|------|
+| **Resume Tailor** | Optimize resume for specific job applications | HR/Personal | [View](./resume-tailor/) |
+| **Cover Letter** | Write compelling, personalized cover letters | HR/Personal | Planned |
+| **Job Description** | Create clear, inclusive job postings | HR | Planned |
+| **Offer Letter** | Generate professional employment offers | HR | Planned |
 
 ### Finance & Business
 
-| Skill | Description | Use Case |
-|-------|-------------|----------|
-| [**Invoice Generator**](./invoice-generator/) | Create professional invoices with proper formatting | Freelancers, consultants |
-| [**Expense Report**](./expense-report/) | Organize and summarize business expenses | Employees, contractors |
-| [**Proposal Writer**](./proposal-writer/) | Write winning business proposals | Sales teams, consultants |
-| [**Quotation**](./quotation/) | Generate accurate price quotes | Sales, service providers |
+| Skill | Description | Department | Link |
+|-------|-------------|------------|------|
+| **Invoice Generator** | Create professional invoices with proper formatting | Finance | [View](./invoice-generator/) |
+| **Expense Report** | Organize and summarize business expenses | Finance | Planned |
+| **Proposal Writer** | Write winning business proposals | Sales | Planned |
+| **Financial Model** | Build DCF and valuation models | Finance | Planned |
+
+### Communication & Writing
+
+| Skill | Description | Department | Link |
+|-------|-------------|------------|------|
+| **Internal Comms** | Status reports, newsletters, FAQs | Ops | [View](./official-skills/internal-comms.md) |
+| **Doc Co-authoring** | Structured workflow for writing documentation | All | [View](./official-skills/doc-coauthoring.md) |
+| **Email Drafter** | Professional email templates and responses | All | Planned |
+| **Presentation Script** | Create compelling presentation narratives | Marketing | Planned |
 
 ### Productivity
 
-| Skill | Description | Use Case |
-|-------|-------------|----------|
-| [**Meeting Notes**](./meeting-notes/) | Transform raw notes into structured summaries | Everyone in meetings |
-| [**Weekly Report**](./weekly-report/) | Create consistent status updates | Team members, managers |
-| [**Project Brief**](./project-brief/) | Define project scope and requirements | Project managers |
+| Skill | Description | Department | Link |
+|-------|-------------|------------|------|
+| **Meeting Notes** | Transform raw notes into structured summaries | All | Planned |
+| **Weekly Report** | Create consistent status updates | All | Planned |
+| **Project Brief** | Define project scope and requirements | PM | Planned |
 
-### Official Anthropic Skills
+### Document Processing
 
-These are reference guides for official Claude skills from [Anthropic](https://github.com/anthropics/skills). See [official-skills/](./official-skills/) for details.
+Official Anthropic skills for working with Office documents. See [official-skills/](./official-skills/) for details.
 
-| Skill | Description | License |
-|-------|-------------|---------|
-| [**DOCX Guide**](./official-skills/docx-guide.md) | Word document creation, editing, tracked changes | Source-available |
-| [**XLSX Guide**](./official-skills/xlsx-guide.md) | Excel spreadsheets, formulas, financial models | Source-available |
-| [**PPTX Guide**](./official-skills/pptx-guide.md) | PowerPoint presentations | Source-available |
-| [**PDF Guide**](./official-skills/pdf-guide.md) | PDF processing, forms, extraction | Source-available |
-| [**Internal Comms**](./official-skills/internal-comms.md) | Status reports, newsletters, FAQs | Apache 2.0 |
-| [**Doc Co-authoring**](./official-skills/doc-coauthoring.md) | Structured workflow for writing docs | Apache 2.0 |
+| Skill | Description | Department | License |
+|-------|-------------|------------|---------|
+| **DOCX** | Word document creation, editing, tracked changes | All | [Source-available](./official-skills/docx-guide.md) |
+| **XLSX** | Excel spreadsheets, formulas, financial models | Finance/Ops | [Source-available](./official-skills/xlsx-guide.md) |
+| **PPTX** | PowerPoint presentations | Marketing/All | [Source-available](./official-skills/pptx-guide.md) |
+| **PDF** | PDF processing, forms, extraction | All | [Source-available](./official-skills/pdf-guide.md) |
 
 ---
 
-## Why These Skills Work
+## Creating Skills
 
-### 1. Embedded Domain Knowledge
-Each skill contains real professional knowledge:
-- Legal risk patterns and jurisdiction-specific rules
-- Industry-standard formats and requirements
-- Best practices from actual professionals
+### Skill Structure
 
-### 2. Structured Workflows
-Not just "write a contract" - but step-by-step processes:
-- What information to gather
-- What to check for
-- How to format output
-- What warnings to give
+Each skill is a folder containing a `SKILL.md` file with YAML frontmatter:
 
-### 3. Multilingual Support
-Many skills support multiple languages including English and Chinese, enabling analysis of contracts and documents in different languages.
+```
+skill-name/
+├── SKILL.md          # Required: Skill instructions and metadata
+├── README.md         # Optional: Usage documentation
+└── examples/         # Optional: Example files
+```
+
+### Basic Skill Template
+
+```markdown
+---
+name: my-skill-name
+description: A clear description of what this skill does
+version: 1.0.0
+author: your-name
+license: MIT
+---
+
+# My Skill Name
+
+## Overview
+[What this skill does and when to use it]
+
+## How to Use
+[Step-by-step instructions]
+
+## Domain Knowledge
+[Embedded expertise that makes this skill valuable]
+
+## Examples
+[Real-world usage examples]
+
+## Limitations
+[What this skill cannot do]
+```
+
+### What Makes a Good Skill?
+
+- **Specific**: Solves one clear problem
+- **Knowledge-rich**: Contains real domain expertise
+- **Actionable**: Clear steps and outputs
+- **Tested**: Actually works with Claude
+- **Documented**: Examples and edge cases
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+
+---
+
+## Architecture
+
+![Claude Office Skills Architecture](./architecture.png)
+
+| Component | Description | Users |
+|-----------|-------------|-------|
+| **Community Hub** (this repo) | Zero setup - copy & paste SKILL.md | 90% of users |
+| **Advanced** | MCP Server + HTTP API + Cloudflare | Power users |
+
+---
+
+## Advanced Usage
+
+For power users who need programmatic access or integrations:
+
+| Repository | Description | Features |
+|------------|-------------|----------|
+| [contract-review-skill](https://github.com/claude-office-skills/contract-review-skill) | Full MCP server + HTTP API | Claude Desktop, Cloudflare, CI/CD |
 
 ---
 
 ## Contributing
 
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions! **No coding required** - just write clear instructions in Markdown.
 
 ### Quick Contribution
 
@@ -120,45 +233,46 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 3. Follow the [template](./_template/SKILL.md)
 4. Submit a PR
 
-**No coding required** - just write clear instructions in Markdown!
+### Contribution Ideas
 
-### What Makes a Good Skill?
+- [ ] **Email Drafter** - Professional email templates
+- [ ] **Meeting Notes** - Structure raw meeting notes
+- [ ] **Proposal Writer** - Business proposal generator
+- [ ] **Financial Model** - DCF and valuation templates
+- [ ] **Job Description** - Inclusive job posting generator
+- [ ] **Expense Report** - Expense organization and summary
 
-- **Specific**: Solves one clear problem
-- **Knowledge-rich**: Contains domain expertise
-- **Actionable**: Clear steps and outputs
-- **Tested**: Actually works with Claude
-
----
-
-## Community
-
-- [Discussions](https://github.com/claude-office-skills/skills/discussions) - Ask questions, share ideas
-- [Issues](https://github.com/claude-office-skills/skills/issues) - Report problems, request skills
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ---
 
-## Architecture
+## Resources
 
-![Claude Office Skills Architecture](./architecture.png)
+### Official Documentation
 
-**Community Hub** (this repo): Zero setup - just copy & paste SKILL.md files into Claude.
+- [Claude Skills Overview](https://www.anthropic.com/news/agent-skills) - Official announcement
+- [Skills User Guide](https://support.claude.com/en/articles/12512180-using-skills-in-claude) - How to use skills
+- [Creating Custom Skills](https://support.claude.com/en/articles/12512198-creating-custom-skills) - Development guide
+- [Agent Skills Blog](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) - Engineering deep dive
 
-**Advanced**: For power users who need MCP Server, HTTP API, or Cloudflare deployment.
+### Community Resources
 
-## Advanced Usage
+- [Anthropic Skills Repository](https://github.com/anthropics/skills) - Official example skills
+- [Awesome Claude Skills](https://github.com/ComposioHQ/awesome-claude-skills) - Community curation (27k+ stars)
+- [Awesome n8n Templates](https://github.com/enescingoz/awesome-n8n-templates) - Workflow automation inspiration
 
-For power users who want more capabilities:
+### Related Projects
 
-| Repository | Description |
-|------------|-------------|
-| [contract-review-skill](https://github.com/claude-office-skills/contract-review-skill) | Full MCP server + HTTP API for contract review |
+- [MCP Protocol](https://modelcontextprotocol.io) - Model Context Protocol specification
+- [Claude Code](https://claude.ai/code) - Claude's coding environment
 
 ---
 
 ## License
 
-MIT License - use freely, contribute back!
+This repository is licensed under the [MIT License](LICENSE).
+
+Individual skills may have different licenses - check each skill's folder for specific terms.
 
 ---
 
@@ -167,7 +281,10 @@ MIT License - use freely, contribute back!
 Inspired by:
 - [Anthropic Skills](https://github.com/anthropics/skills) - Official Claude Skills
 - [Awesome Claude Skills](https://github.com/ComposioHQ/awesome-claude-skills) - Community curation
+- [Awesome n8n Templates](https://github.com/enescingoz/awesome-n8n-templates) - Workflow automation
 
 ---
 
 **Made with Claude, for everyone who works with documents.**
+
+*Note: Claude Skills work across Claude.ai, Claude Code, and the Claude API. Once you create a skill, it's portable across all platforms.*
