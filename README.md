@@ -74,6 +74,19 @@ Add to your Claude configuration:
 | [**Weekly Report**](./weekly-report/) | Create consistent status updates | Team members, managers |
 | [**Project Brief**](./project-brief/) | Define project scope and requirements | Project managers |
 
+### Official Anthropic Skills
+
+These are reference guides for official Claude skills from [Anthropic](https://github.com/anthropics/skills). See [official-skills/](./official-skills/) for details.
+
+| Skill | Description | License |
+|-------|-------------|---------|
+| [**DOCX Guide**](./official-skills/docx-guide.md) | Word document creation, editing, tracked changes | Source-available |
+| [**XLSX Guide**](./official-skills/xlsx-guide.md) | Excel spreadsheets, formulas, financial models | Source-available |
+| [**PPTX Guide**](./official-skills/pptx-guide.md) | PowerPoint presentations | Source-available |
+| [**PDF Guide**](./official-skills/pdf-guide.md) | PDF processing, forms, extraction | Source-available |
+| [**Internal Comms**](./official-skills/internal-comms.md) | Status reports, newsletters, FAQs | Apache 2.0 |
+| [**Doc Co-authoring**](./official-skills/doc-coauthoring.md) | Structured workflow for writing docs | Apache 2.0 |
+
 ---
 
 ## Why These Skills Work
