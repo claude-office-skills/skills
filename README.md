@@ -5,7 +5,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Skills](https://img.shields.io/badge/Skills-15+-blue.svg)](#skills)
+[![Skills](https://img.shields.io/badge/Skills-20+-blue.svg)](#skills)
 
 ---
 
@@ -104,7 +104,7 @@ response = client.messages.create(
 | Skill | Description | Department | Link |
 |-------|-------------|------------|------|
 | **Resume Tailor** | Optimize resume for specific job applications | HR/Personal | [View](./resume-tailor/) |
-| **Cover Letter** | Write compelling, personalized cover letters | HR/Personal | Planned |
+| **Cover Letter** | Write compelling, personalized cover letters | HR/Personal | [View](./cover-letter/) |
 | **Job Description** | Create clear, inclusive job postings | HR | Planned |
 | **Offer Letter** | Generate professional employment offers | HR | Planned |
 
@@ -113,8 +113,8 @@ response = client.messages.create(
 | Skill | Description | Department | Link |
 |-------|-------------|------------|------|
 | **Invoice Generator** | Create professional invoices with proper formatting | Finance | [View](./invoice-generator/) |
-| **Expense Report** | Organize and summarize business expenses | Finance | Planned |
-| **Proposal Writer** | Write winning business proposals | Sales | Planned |
+| **Expense Report** | Organize and summarize business expenses | Finance | [View](./expense-report/) |
+| **Proposal Writer** | Write winning business proposals | Sales | [View](./proposal-writer/) |
 | **Financial Model** | Build DCF and valuation models | Finance | Planned |
 
 ### Communication & Writing
@@ -123,15 +123,15 @@ response = client.messages.create(
 |-------|-------------|------------|------|
 | **Internal Comms** | Status reports, newsletters, FAQs | Ops | [View](./official-skills/internal-comms.md) |
 | **Doc Co-authoring** | Structured workflow for writing documentation | All | [View](./official-skills/doc-coauthoring.md) |
-| **Email Drafter** | Professional email templates and responses | All | Planned |
+| **Email Drafter** | Professional email templates and responses | All | [View](./email-drafter/) |
 | **Presentation Script** | Create compelling presentation narratives | Marketing | Planned |
 
 ### Productivity
 
 | Skill | Description | Department | Link |
 |-------|-------------|------------|------|
-| **Meeting Notes** | Transform raw notes into structured summaries | All | Planned |
-| **Weekly Report** | Create consistent status updates | All | Planned |
+| **Meeting Notes** | Transform raw notes into structured summaries | All | [View](./meeting-notes/) |
+| **Weekly Report** | Create consistent status updates | All | [View](./weekly-report/) |
 | **Project Brief** | Define project scope and requirements | PM | Planned |
 
 ### Document Processing
