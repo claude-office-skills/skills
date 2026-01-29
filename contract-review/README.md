@@ -8,7 +8,7 @@ Analyze contracts for risks, check completeness, and get actionable recommendati
 
 Or use the direct link:
 ```
-Please use this skill: https://raw.githubusercontent.com/claude-office-skills/skills/main/contract-review/SKILL.md
+Please use this skill: https://raw.githubusercontent.com/claude-office-skills/all-in-one-skills/main/contract-review/SKILL.md
 
 Then review my contract: [upload file]
 ```

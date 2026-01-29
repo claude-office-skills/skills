@@ -37,4 +37,4 @@ Before submitting, test your skill:
 
 ## Questions?
 
-Open a [Discussion](https://github.com/claude-office-skills/skills/discussions) or [Issue](https://github.com/claude-office-skills/skills/issues).
+Open a [Discussion](https://github.com/claude-office-skills/all-in-one-skills/discussions) or [Issue](https://github.com/claude-office-skills/all-in-one-skills/issues).

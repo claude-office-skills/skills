@@ -64,7 +64,7 @@ claude
 ### Using Skills via Direct Link
 
 ```
-Please use this skill: https://raw.githubusercontent.com/claude-office-skills/skills/main/contract-review/SKILL.md
+Please use this skill: https://raw.githubusercontent.com/claude-office-skills/all-in-one-skills/main/contract-review/SKILL.md
 
 Then review my contract: [upload file]
 ```

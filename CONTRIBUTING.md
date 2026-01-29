@@ -143,8 +143,8 @@ Pick one and start contributing!
 
 ## Questions?
 
-- Open an [Issue](https://github.com/claude-office-skills/skills/issues) for bugs or feature requests
-- Start a [Discussion](https://github.com/claude-office-skills/skills/discussions) for questions or ideas
+- Open an [Issue](https://github.com/claude-office-skills/all-in-one-skills/issues) for bugs or feature requests
+- Start a [Discussion](https://github.com/claude-office-skills/all-in-one-skills/discussions) for questions or ideas
 
 ## Code of Conduct
 
