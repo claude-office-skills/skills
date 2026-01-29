@@ -5,7 +5,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Skills](https://img.shields.io/badge/Skills-20+-blue.svg)](#skills)
+[![Skills](https://img.shields.io/badge/Skills-30+-blue.svg)](#skills)
 
 ---
 
@@ -96,8 +96,6 @@ response = client.messages.create(
 |-------|-------------|------------|------|
 | **Contract Review** | Analyze contracts for risks, check completeness, get recommendations | Legal | [View](./contract-review/) |
 | **NDA Generator** | Create professional NDAs for different scenarios | Legal | [View](./nda-generator/) |
-| **Privacy Policy** | Generate GDPR/CCPA compliant privacy policies | Legal/Compliance | Planned |
-| **Terms of Service** | Create fair, legally-sound ToS | Legal | Planned |
 
 ### HR & Careers
 
@@ -105,8 +103,9 @@ response = client.messages.create(
 |-------|-------------|------------|------|
 | **Resume Tailor** | Optimize resume for specific job applications | HR/Personal | [View](./resume-tailor/) |
 | **Cover Letter** | Write compelling, personalized cover letters | HR/Personal | [View](./cover-letter/) |
-| **Job Description** | Create clear, inclusive job postings | HR | Planned |
-| **Offer Letter** | Generate professional employment offers | HR | Planned |
+| **Job Description** | Create clear, inclusive job postings | HR | [View](./job-description/) |
+| **Offer Letter** | Generate professional employment offers | HR | [View](./offer-letter/) |
+| **Applicant Screening** | Screen candidates against job requirements | HR | [View](./applicant-screening/) |
 
 ### Finance & Business
 
@@ -114,8 +113,17 @@ response = client.messages.create(
 |-------|-------------|------------|------|
 | **Invoice Generator** | Create professional invoices with proper formatting | Finance | [View](./invoice-generator/) |
 | **Expense Report** | Organize and summarize business expenses | Finance | [View](./expense-report/) |
+| **Invoice Organizer** | Organize, categorize, and track invoices | Finance | [View](./invoice-organizer/) |
 | **Proposal Writer** | Write winning business proposals | Sales | [View](./proposal-writer/) |
-| **Financial Model** | Build DCF and valuation models | Finance | Planned |
+
+### Sales & Marketing
+
+| Skill | Description | Department | Link |
+|-------|-------------|------------|------|
+| **Lead Research** | Research company/contact info for sales outreach | Sales | [View](./lead-research/) |
+| **Lead Qualification** | Score and qualify leads based on criteria | Sales | [View](./lead-qualification/) |
+| **Content Writer** | Research and write content (blogs, articles) | Marketing | [View](./content-writer/) |
+| **Brand Guidelines** | Create and maintain brand style guides | Marketing | [View](./brand-guidelines/) |
 
 ### Communication & Writing
 
@@ -124,7 +132,8 @@ response = client.messages.create(
 | **Internal Comms** | Status reports, newsletters, FAQs | Ops | [View](./official-skills/internal-comms.md) |
 | **Doc Co-authoring** | Structured workflow for writing documentation | All | [View](./official-skills/doc-coauthoring.md) |
 | **Email Drafter** | Professional email templates and responses | All | [View](./email-drafter/) |
-| **Presentation Script** | Create compelling presentation narratives | Marketing | Planned |
+| **Email Classifier** | Auto-categorize emails by type and priority | All | [View](./email-classifier/) |
+| **Suspicious Email** | Analyze emails for phishing and scam indicators | Security | [View](./suspicious-email/) |
 
 ### Productivity
 
@@ -132,9 +141,25 @@ response = client.messages.create(
 |-------|-------------|------------|------|
 | **Meeting Notes** | Transform raw notes into structured summaries | All | [View](./meeting-notes/) |
 | **Weekly Report** | Create consistent status updates | All | [View](./weekly-report/) |
-| **Project Brief** | Define project scope and requirements | PM | Planned |
+| **File Organizer** | Organize and rename files based on content | All | [View](./file-organizer/) |
+| **Changelog Generator** | Generate release notes from commits/updates | Dev/PM | [View](./changelog-generator/) |
+| **Data Analysis** | Analyze spreadsheet data and generate insights | All | [View](./data-analysis/) |
 
-### Document Processing
+### PDF Power Tools
+
+Comprehensive PDF manipulation skills inspired by [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF) (73k+ stars).
+
+| Skill | Description | Department | Link |
+|-------|-------------|------------|------|
+| **Chat with PDF** | Answer questions, summarize, extract from PDFs | All | [View](./chat-with-pdf/) |
+| **PDF Converter** | Convert PDF to/from Word, Excel, Image formats | All | [View](./pdf-converter/) |
+| **PDF OCR** | Extract text from scanned PDFs using OCR | All | [View](./pdf-ocr/) |
+| **PDF Merge/Split** | Combine or split PDF documents | All | [View](./pdf-merge-split/) |
+| **PDF Form Filler** | Fill out PDF forms programmatically | All | [View](./pdf-form-filler/) |
+| **PDF Compress** | Reduce PDF file size while maintaining quality | All | [View](./pdf-compress/) |
+| **PDF Watermark** | Add watermarks, page numbers, headers/footers | All | [View](./pdf-watermark/) |
+
+### Document Processing (Official)
 
 Official Anthropic skills for working with Office documents. See [official-skills/](./official-skills/) for details.
 
@@ -235,14 +260,14 @@ We welcome contributions! **No coding required** - just write clear instructions
 
 ### Contribution Ideas
 
-- [ ] **Email Drafter** - Professional email templates
-- [ ] **Meeting Notes** - Structure raw meeting notes
-- [ ] **Proposal Writer** - Business proposal generator
-- [ ] **Financial Model** - DCF and valuation templates
-- [ ] **Job Description** - Inclusive job posting generator
-- [ ] **Expense Report** - Expense organization and summary
+See our [Skill Roadmap](SKILL_ROADMAP.md) for planned skills and [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+Future skill ideas:
+- [ ] **Financial Model** - DCF and valuation templates
+- [ ] **Privacy Policy** - GDPR/CCPA compliant policies
+- [ ] **Terms of Service** - Fair, legally-sound ToS
+- [ ] **Project Brief** - Project scope and requirements
+- [ ] **Presentation Script** - Compelling presentation narratives
 
 ---
 
