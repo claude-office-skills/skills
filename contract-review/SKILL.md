@@ -55,84 +55,84 @@ Feel free to ask:
 
 ### High Risk (Red Flags)
 
-#### 1. Unlimited Liability / 无限责任
+#### 1. Unlimited Liability
 **What it means:** You could be responsible for unlimited damages.
-**Look for:** "全部责任", "unlimited liability", "full indemnification", no liability cap
+**Look for:** "unlimited liability", "full indemnification", no liability cap
 **Recommendation:** Add liability cap (e.g., 12 months of fees, or contract value)
 
-#### 2. Broad IP Assignment / 宽泛知识产权转让
+#### 2. Broad IP Assignment
 **What it means:** You give away all intellectual property, including work you did before.
-**Look for:** "全部知识产权", "all intellectual property", "work product", "inventions"
+**Look for:** "all intellectual property", "work product", "inventions", "work for hire"
 **Recommendation:** Exclude pre-existing IP; define scope clearly; check state protections (CA Labor Code 2870)
 
-#### 3. Unilateral Termination / 单方解约权
+#### 3. Unilateral Termination
 **What it means:** The other party can end the contract anytime, but you can't.
-**Look for:** "单方解除", "at will", "unilateral termination", "without cause"
+**Look for:** "at will", "unilateral termination", "without cause", "sole discretion"
 **Recommendation:** Require mutual termination rights or reasonable notice period
 
-#### 4. One-Sided Indemnification / 单向赔偿
+#### 4. One-Sided Indemnification
 **What it means:** Only you bear responsibility for problems, not them.
-**Look for:** "单方赔偿", "甲方不承担", "乙方承担全部", "hold harmless"
+**Look for:** "indemnify and hold harmless", "defend at own expense", "all claims"
 **Recommendation:** Negotiate mutual indemnification
 
-#### 5. Broad Rights Waiver / 宽泛权利放弃
+#### 5. Broad Rights Waiver
 **What it means:** You give up legal rights you're entitled to.
-**Look for:** "放弃权利", "不得主张", "waive", "waiver of rights"
+**Look for:** "waive", "waiver of rights", "release all claims", "forever discharge"
 **Recommendation:** Remove or limit scope; some waivers may be unenforceable
 
-#### 6. Missing Data Protection / 缺少数据保护条款
+#### 6. Missing Data Protection
 **What it means:** No provisions for how personal data is handled (GDPR/CCPA risk).
-**Look for:** Absence of "个人信息", "数据保护", "personal data", "GDPR", "privacy"
+**Look for:** Absence of "personal data", "GDPR", "privacy", "data protection"
 **Recommendation:** Add data protection clause compliant with applicable laws
 
 ### Medium Risk (Yellow Flags)
 
-#### 7. Auto-Renewal Trap / 自动续约陷阱
+#### 7. Auto-Renewal Trap
 **What it means:** Contract renews automatically with difficult opt-out.
-**Look for:** "自动续约", "automatically renew", "unless written notice"
+**Look for:** "automatically renew", "unless written notice", "evergreen"
 **Recommendation:** Add clear opt-out with 30-day notice minimum
 
-#### 8. Excessive Penalty / 过高违约金
+#### 8. Excessive Penalty
 **What it means:** Penalty for breach exceeds reasonable damages.
-**Look for:** "违约金", "罚款", "penalty", "liquidated damages"
+**Look for:** "penalty", "liquidated damages", "forfeit"
 **Recommendation:** Ensure penalty is proportionate to actual damages
 
-#### 9. Broad Non-Compete / 宽泛竞业限制
+#### 9. Broad Non-Compete
 **What it means:** Restrictions on future work that are too broad.
-**Look for:** "竞业限制", "non-compete", "non-competition"
+**Look for:** "non-compete", "non-competition", "competitive business"
 **Recommendation:** Limit to 1-2 years, specific geography, narrow scope
 **Note:** California: generally unenforceable; FTC proposing ban (pending)
 
-#### 10. Perpetual Confidentiality / 永久保密
+#### 10. Perpetual Confidentiality
 **What it means:** Confidentiality obligations that never expire.
-**Look for:** "永久保密", "perpetual", "indefinite", "forever"
+**Look for:** "perpetual", "indefinite", "forever", "in perpetuity"
 **Recommendation:** Set reasonable time limit (3-5 years typical)
 
-#### 11. Unfavorable Jurisdiction / 不利管辖
+#### 11. Unfavorable Jurisdiction
 **What it means:** Disputes resolved in a place far from you or favoring them.
-**Look for:** "管辖", "仲裁地", "jurisdiction", "arbitration venue"
+**Look for:** "jurisdiction", "arbitration venue", "exclusive venue"
 **Recommendation:** Negotiate neutral venue or your local jurisdiction
 
-#### 12. Unfavorable Payment Terms / 不利付款条款
+#### 12. Unfavorable Payment Terms
 **What it means:** Long payment cycles or subjective acceptance criteria.
-**Look for:** "付款", "结算", "net 90", "upon satisfaction"
+**Look for:** "net 90", "upon satisfaction", "when commercially reasonable"
 **Recommendation:** Negotiate shorter cycles (net 30), objective acceptance criteria
 
-#### 13. Uncontrolled Scope Changes / 范围变更无控制
+#### 13. Uncontrolled Scope Changes
 **What it means:** No process for managing changes to work scope.
-**Look for:** "变更", "change order", "as directed", "scope change"
+**Look for:** "change order", "as directed", "scope change", "additional work"
 **Recommendation:** Add change management process with pricing mechanism
 
-#### 14. Missing Force Majeure / 缺少不可抗力条款
+#### 14. Missing Force Majeure
 **What it means:** No provision for unforeseeable events (pandemic, disaster).
-**Look for:** Absence of "不可抗力", "force majeure"
+**Look for:** Absence of "force majeure", "act of god"
 **Recommendation:** Add standard force majeure clause
 
 ### Low Risk (Worth Noting)
 
-#### 15. Missing Audit Rights / 缺少审计权
+#### 15. Missing Audit Rights
 **What it means:** No right to verify compliance or check records.
-**Look for:** Absence of "审计", "inspection", "audit rights"
+**Look for:** Absence of "inspection", "audit rights", "records access"
 **Recommendation:** Add reasonable audit rights for significant contracts
 
 ---
@@ -191,13 +191,13 @@ A well-drafted contract should include:
 - **Non-Competes**: Must be compensated in many countries
 - **Language**: May need to be in local language to be enforceable
 
-### China / 中国
+### China
 
-- **劳动合同法**: Mandatory written contract within 30 days
-- **试用期**: Probation limited by contract length (max 6 months)
-- **竞业限制**: Must pay compensation (30-50% of salary) during restriction
-- **经济补偿**: Severance required for many termination scenarios
-- **社保**: Social insurance contributions mandatory
+- **Labor Contract Law**: Mandatory written contract within 30 days
+- **Probation Period**: Limited by contract length (max 6 months)
+- **Non-Compete**: Must pay compensation (30-50% of salary) during restriction
+- **Severance**: Required for many termination scenarios
+- **Social Insurance**: Contributions mandatory (pension, medical, etc.)
 
 ### United Kingdom
 
@@ -361,10 +361,8 @@ legal advice. For important contracts, consult a qualified attorney.
 
 ## Languages
 
-This skill works in both English and Chinese (中文). 
-Feel free to share contracts in either language.
-
-本技能支持中英文合同审核。可以直接上传中文合同。
+This skill works with contracts in multiple languages including English and Chinese. 
+Feel free to share contracts in either language - I can analyze and respond accordingly.
 
 ---
 

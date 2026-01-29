@@ -91,11 +91,8 @@ Not just "write a contract" - but step-by-step processes:
 - How to format output
 - What warnings to give
 
-### 3. Bilingual Support
-Many skills support both English and Chinese:
-- 合同审核 / Contract Review
-- 发票生成 / Invoice Generator
-- 简历优化 / Resume Tailor
+### 3. Multilingual Support
+Many skills support multiple languages including English and Chinese, enabling analysis of contracts and documents in different languages.
 
 ---
 
@@ -127,6 +124,14 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 - [Issues](https://github.com/claude-office-skills/skills/issues) - Report problems, request skills
 
 ---
+
+## Architecture
+
+![Claude Office Skills Architecture](./architecture.png)
+
+**Community Hub** (this repo): Zero setup - just copy & paste SKILL.md files into Claude.
+
+**Advanced**: For power users who need MCP Server, HTTP API, or Cloudflare deployment.
 
 ## Advanced Usage
 

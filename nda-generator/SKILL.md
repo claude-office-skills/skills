@@ -298,12 +298,12 @@ Date: _______________
 - Some countries require specific language
 - Enforcement varies by country
 
-### China / 中国
+### China
 
-- Called 保密协议 (Bǎomì Xiéyì)
-- Often combined with 竞业限制
-- Enforcement improving but varies
-- Consider bilingual version
+- Enforcement improving but varies by region
+- Often combined with non-compete agreements
+- Consider bilingual version for cross-border deals
+- Local notarization may strengthen enforceability
 
 ### United Kingdom
 
@@ -346,9 +346,8 @@ Date: _______________
 
 ## Languages
 
-Works in English and Chinese.
-
-支持中英文保密协议生成。如需中文版本请说明。
+Works with multiple languages including English and Chinese.
+Just specify your preferred language when requesting an NDA.
 
 ---
 

@@ -113,19 +113,19 @@ Copy the output to your preferred tool:
 
 **Reverse Charge:** For B2B services in EU, buyer may handle VAT. Include "Reverse Charge - VAT to be paid by recipient."
 
-### China / 中国
+### China
 
-**发票要求:**
-- 普通发票 vs 增值税专用发票
-- 需要税务登记号
-- 正规发票需要通过税务系统开具
+**Invoice Requirements:**
+- Regular invoice vs. VAT special invoice (fapiao)
+- Tax registration number required
+- Official invoices must be issued through tax authority system
 
-**增值税率:**
-| 类型 | 税率 |
+**VAT Rates:**
+| Type | Rate |
 |------|------|
-| 一般货物 | 13% |
-| 服务 | 6% |
-| 小规模纳税人 | 3% |
+| General Goods | 13% |
+| Services | 6% |
+| Small-scale Taxpayer | 3% |
 
 ### Australia
 
@@ -353,9 +353,8 @@ VAT Registration: GB123456789
 
 ## Languages
 
-Works in English and Chinese (中文).
-
-支持中英文发票生成。如需开具中文发票，请注明。
+Works with multiple languages including English and Chinese.
+Just specify your preferred language when requesting an invoice.
 
 ---
 

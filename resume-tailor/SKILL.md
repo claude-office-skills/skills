@@ -307,9 +307,8 @@ A: Include if relevant! Especially for tech roles or career changers. Show initi
 
 ## Languages
 
-This skill works in English. For other languages, I can help but may have less industry-specific knowledge.
-
-简历优化服务目前主要支持英文。中文简历可以帮助，但对特定行业的了解可能有限。
+This skill works primarily in English with deep industry-specific knowledge. 
+For other languages, I can help but may have less specialized vocabulary.
 
 ---
 
