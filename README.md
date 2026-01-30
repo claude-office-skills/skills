@@ -31,6 +31,36 @@ cd mcp-servers/office-mcp && npm install && npm run build
 
 ---
 
+## 📚 NEW: Extensible Knowledge Base
+
+**Domain knowledge as structured data** - customize Claude's expertise for your jurisdiction and industry.
+
+| Layer | Description | Customizable |
+|-------|-------------|--------------|
+| **Base** | Universal risk patterns, completeness checklists | Core team |
+| **Jurisdictions** | US, China, EU, California... | Community |
+| **Domain** | Healthcare, Finance, Government... | Community |
+| **Custom** | Your company rules, private knowledge | You |
+
+**Available Knowledge:**
+- 15+ risk patterns (liability, IP, termination, confidentiality...)
+- 19 completeness check items
+- 4 jurisdictions (US Federal, California, China, EU)
+
+**Quick Start:**
+```yaml
+# In your SKILL.md
+knowledge:
+  base:
+    - mcp-servers/office-mcp/knowledge/base/risk_patterns.json
+  jurisdictions:
+    - mcp-servers/office-mcp/knowledge/base/jurisdictions/california.json
+```
+
+[📖 Knowledge Index](./KNOWLEDGE_INDEX.md) | [🤝 Contribute Knowledge](./CONTRIBUTING_KNOWLEDGE.md)
+
+---
+
 ## Contents
 
 - [What Are Claude Skills?](#what-are-claude-skills)
