@@ -6,6 +6,24 @@
  */
 
 import { Tool } from "@modelcontextprotocol/sdk/types.js";
+import * as fs from "fs";
+import * as path from "path";
+import * as XLSX from "xlsx";
+import * as mammoth from "mammoth";
+import TurndownService from "turndown";
+import { marked } from "marked";
+import {
+  Document,
+  Paragraph,
+  TextRun,
+  HeadingLevel,
+  Table,
+  TableRow,
+  TableCell,
+  WidthType,
+  Packer,
+} from "docx";
+import pdfParse from "pdf-parse";
 
 /**
  * Conversion tool definitions
@@ -310,57 +328,405 @@ export async function handleConversionTool(
 }
 
 // Tool implementations
-async function docxToPdf(args: Record<string, unknown>): Promise<string> {
+
+async function docxToPdf(args: Record<string, unknown>): Promise<object> {
   const { file_path, output_path } = args;
-  return `Converted ${file_path} to PDF at ${output_path}`;
+  
+  // Note: DOCX to PDF conversion requires external tools
+  // Options: libreoffice, pandoc with latex, or cloud services
+  return {
+    success: false,
+    message: "DOCX to PDF conversion requires external tools",
+    file: file_path,
+    output: output_path,
+    alternatives: [
+      "Install LibreOffice: brew install --cask libreoffice",
+      "Use: soffice --headless --convert-to pdf --outdir <output_dir> <input_file>",
+      "Or use pandoc with LaTeX: pandoc input.docx -o output.pdf",
+      "Or use a cloud conversion API",
+    ],
+  };
 }
 
-async function pdfToDocx(args: Record<string, unknown>): Promise<string> {
-  const { file_path, output_path, preserve_layout } = args;
-  return `Converted ${file_path} to DOCX at ${output_path} (preserve_layout: ${preserve_layout})`;
+async function pdfToDocx(args: Record<string, unknown>): Promise<object> {
+  const { file_path, output_path } = args;
+  
+  try {
+    const filePath = file_path as string;
+    const outputPath = output_path as string;
+    
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`File not found: ${filePath}`);
+    }
+    
+    // Extract text from PDF
+    const dataBuffer = fs.readFileSync(filePath);
+    const pdfData = await pdfParse(dataBuffer);
+    const text = pdfData.text;
+    
+    // Create DOCX with extracted text
+    const paragraphs = text.split('\n').filter(line => line.trim()).map(
+      line => new Paragraph({ text: line })
+    );
+    
+    const doc = new Document({
+      sections: [{ children: paragraphs }],
+    });
+    
+    const buffer = await Packer.toBuffer(doc);
+    fs.writeFileSync(outputPath, buffer);
+    
+    return {
+      success: true,
+      message: `Converted PDF to DOCX (text-only extraction)`,
+      input: file_path,
+      output: output_path,
+      pages: pdfData.numpages,
+      note: "Layout and images are not preserved. For full conversion, use Adobe Acrobat or online services.",
+    };
+    
+  } catch (error: any) {
+    return {
+      success: false,
+      error: `Failed to convert PDF to DOCX: ${error.message}`,
+    };
+  }
 }
 
 async function mdToDocx(args: Record<string, unknown>): Promise<string> {
-  const { output_path } = args;
-  return `Converted Markdown to DOCX at ${output_path}`;
+  const { markdown_content, markdown_file, output_path } = args;
+  
+  try {
+    const outputPath = output_path as string;
+    
+    // Get markdown content
+    let mdContent: string;
+    if (markdown_content) {
+      mdContent = markdown_content as string;
+    } else if (markdown_file) {
+      const mdFile = markdown_file as string;
+      if (!fs.existsSync(mdFile)) {
+        throw new Error(`Markdown file not found: ${mdFile}`);
+      }
+      mdContent = fs.readFileSync(mdFile, 'utf-8');
+    } else {
+      throw new Error('Either markdown_content or markdown_file is required');
+    }
+    
+    // Parse markdown to HTML
+    const html = await marked(mdContent);
+    
+    // Convert HTML to document structure
+    const children: Paragraph[] = [];
+    
+    // Simple HTML to DOCX conversion
+    const lines = html.split(/<\/?(?:p|h[1-6]|li|br)[^>]*>/i).filter(line => line.trim());
+    
+    // Process headings and paragraphs
+    const headingMatches = html.matchAll(/<(h[1-6])>(.*?)<\/\1>/gi);
+    for (const match of headingMatches) {
+      const level = parseInt(match[1].charAt(1));
+      const text = match[2].replace(/<[^>]*>/g, ''); // Strip inner HTML
+      const headingLevels: { [key: number]: typeof HeadingLevel[keyof typeof HeadingLevel] } = {
+        1: HeadingLevel.HEADING_1,
+        2: HeadingLevel.HEADING_2,
+        3: HeadingLevel.HEADING_3,
+        4: HeadingLevel.HEADING_4,
+        5: HeadingLevel.HEADING_5,
+        6: HeadingLevel.HEADING_6,
+      };
+      children.push(new Paragraph({
+        text: text,
+        heading: headingLevels[level] || HeadingLevel.HEADING_1,
+      }));
+    }
+    
+    // Process paragraphs
+    const paragraphMatches = html.matchAll(/<p>(.*?)<\/p>/gi);
+    for (const match of paragraphMatches) {
+      const text = match[1].replace(/<[^>]*>/g, ''); // Strip inner HTML
+      children.push(new Paragraph({ text }));
+    }
+    
+    // Process list items
+    const listMatches = html.matchAll(/<li>(.*?)<\/li>/gi);
+    for (const match of listMatches) {
+      const text = match[1].replace(/<[^>]*>/g, '');
+      children.push(new Paragraph({
+        text: text,
+        bullet: { level: 0 },
+      }));
+    }
+    
+    const doc = new Document({
+      sections: [{ children }],
+    });
+    
+    const buffer = await Packer.toBuffer(doc);
+    fs.writeFileSync(outputPath, buffer);
+    
+    return `Successfully converted Markdown to DOCX at ${outputPath}`;
+    
+  } catch (error: any) {
+    return `Error converting Markdown to DOCX: ${error.message}`;
+  }
 }
 
 async function docxToMd(args: Record<string, unknown>): Promise<string> {
-  const { file_path, output_path, include_images } = args;
-  return `Converted ${file_path} to Markdown at ${output_path} (images: ${include_images})`;
+  const { file_path, output_path } = args;
+  
+  try {
+    const filePath = file_path as string;
+    const outputPath = output_path as string;
+    
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`File not found: ${filePath}`);
+    }
+    
+    // Read DOCX and convert to HTML
+    const buffer = fs.readFileSync(filePath);
+    const result = await mammoth.convertToHtml({ buffer });
+    const html = result.value;
+    
+    // Convert HTML to Markdown using Turndown
+    const turndownService = new TurndownService({
+      headingStyle: 'atx',
+      codeBlockStyle: 'fenced',
+    });
+    
+    const markdown = turndownService.turndown(html);
+    
+    // Write markdown file
+    fs.writeFileSync(outputPath, markdown, 'utf-8');
+    
+    return `Successfully converted DOCX to Markdown at ${outputPath}. Warnings: ${result.messages.length}`;
+    
+  } catch (error: any) {
+    return `Error converting DOCX to Markdown: ${error.message}`;
+  }
 }
 
 async function xlsxToCsv(args: Record<string, unknown>): Promise<string> {
-  const { file_path, output_path, sheet_name } = args;
-  return `Converted ${file_path} (sheet: ${sheet_name || 'first'}) to CSV at ${output_path}`;
+  const { file_path, output_path, sheet_name, delimiter } = args;
+  
+  try {
+    const filePath = file_path as string;
+    const outputPath = output_path as string;
+    const delim = delimiter as string || ',';
+    
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`File not found: ${filePath}`);
+    }
+    
+    // Read workbook
+    const workbook = XLSX.readFile(filePath);
+    const targetSheet = sheet_name as string || workbook.SheetNames[0];
+    const worksheet = workbook.Sheets[targetSheet];
+    
+    // Convert to CSV
+    const csv = XLSX.utils.sheet_to_csv(worksheet, { FS: delim });
+    
+    // Write CSV file
+    fs.writeFileSync(outputPath, csv, 'utf-8');
+    
+    return `Successfully converted ${targetSheet} to CSV at ${outputPath}`;
+    
+  } catch (error: any) {
+    return `Error converting XLSX to CSV: ${error.message}`;
+  }
 }
 
 async function csvToXlsx(args: Record<string, unknown>): Promise<string> {
-  const { file_path, output_path, sheet_name } = args;
-  return `Converted ${file_path} to XLSX at ${output_path} (sheet: ${sheet_name || 'Sheet1'})`;
+  const { file_path, output_path, delimiter, sheet_name } = args;
+  
+  try {
+    const filePath = file_path as string;
+    const outputPath = output_path as string;
+    const delim = delimiter as string || ',';
+    const sheetName = sheet_name as string || 'Sheet1';
+    
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`File not found: ${filePath}`);
+    }
+    
+    // Read CSV
+    const csvContent = fs.readFileSync(filePath, 'utf-8');
+    
+    // Parse CSV manually (simple parser)
+    const rows = csvContent.split('\n').map(line => {
+      // Handle quoted fields
+      const cells: string[] = [];
+      let current = '';
+      let inQuotes = false;
+      
+      for (const char of line) {
+        if (char === '"') {
+          inQuotes = !inQuotes;
+        } else if (char === delim && !inQuotes) {
+          cells.push(current.trim());
+          current = '';
+        } else {
+          current += char;
+        }
+      }
+      cells.push(current.trim());
+      return cells;
+    }).filter(row => row.some(cell => cell));
+    
+    // Create workbook
+    const worksheet = XLSX.utils.aoa_to_sheet(rows);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+    
+    // Write XLSX
+    XLSX.writeFile(workbook, outputPath);
+    
+    return `Successfully converted CSV to XLSX at ${outputPath} (${rows.length} rows)`;
+    
+  } catch (error: any) {
+    return `Error converting CSV to XLSX: ${error.message}`;
+  }
 }
 
-async function htmlToPdf(args: Record<string, unknown>): Promise<string> {
-  const { output_path } = args;
-  return `Converted HTML to PDF at ${output_path}`;
+async function htmlToPdf(args: Record<string, unknown>): Promise<object> {
+  const { html_content, html_file, output_path } = args;
+  
+  // Note: HTML to PDF requires a browser engine (puppeteer) or external tools
+  return {
+    success: false,
+    message: "HTML to PDF conversion requires Puppeteer or external tools",
+    output: output_path,
+    alternatives: [
+      "Install puppeteer: npm install puppeteer",
+      "Use wkhtmltopdf: brew install wkhtmltopdf",
+      "Use Chrome headless: chrome --headless --print-to-pdf",
+      "Save HTML and use browser print to PDF",
+    ],
+    html_preview: html_content ? (html_content as string).substring(0, 200) + '...' : 'from file',
+  };
 }
 
 async function jsonToXlsx(args: Record<string, unknown>): Promise<string> {
-  const { output_path, sheet_name } = args;
-  return `Converted JSON to XLSX at ${output_path} (sheet: ${sheet_name || 'Data'})`;
+  const { json_data, json_file, output_path, sheet_name, include_headers } = args;
+  
+  try {
+    const outputPath = output_path as string;
+    const sheetName = sheet_name as string || 'Data';
+    const headers = include_headers as boolean ?? true;
+    
+    // Get JSON data
+    let data: Record<string, unknown>[];
+    if (json_data) {
+      data = json_data as Record<string, unknown>[];
+    } else if (json_file) {
+      const jsonFilePath = json_file as string;
+      if (!fs.existsSync(jsonFilePath)) {
+        throw new Error(`JSON file not found: ${jsonFilePath}`);
+      }
+      const jsonContent = fs.readFileSync(jsonFilePath, 'utf-8');
+      data = JSON.parse(jsonContent);
+    } else {
+      throw new Error('Either json_data or json_file is required');
+    }
+    
+    if (!Array.isArray(data) || data.length === 0) {
+      throw new Error('JSON data must be a non-empty array of objects');
+    }
+    
+    // Convert to worksheet
+    const worksheet = XLSX.utils.json_to_sheet(data, {
+      header: headers ? Object.keys(data[0]) : undefined,
+    });
+    
+    // Create workbook
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+    
+    // Write file
+    XLSX.writeFile(workbook, outputPath);
+    
+    return `Successfully converted JSON to XLSX at ${outputPath} (${data.length} records)`;
+    
+  } catch (error: any) {
+    return `Error converting JSON to XLSX: ${error.message}`;
+  }
 }
 
 async function batchConvert(args: Record<string, unknown>): Promise<object> {
-  const { input_dir, output_dir, from_format, to_format } = args;
-  return {
-    input_directory: input_dir,
-    output_directory: output_dir,
-    conversion: `${from_format} → ${to_format}`,
-    files_processed: 15,
-    successful: 14,
-    failed: 1,
-    errors: [
-      { file: "corrupted.docx", error: "File appears to be corrupted" },
-    ],
-  };
+  const { input_dir, output_dir, from_format, to_format, file_pattern } = args;
+  
+  try {
+    const inputDir = input_dir as string;
+    const outputDir = output_dir as string;
+    const fromFmt = from_format as string;
+    const toFmt = to_format as string;
+    const pattern = file_pattern as string || `*.${fromFmt}`;
+    
+    if (!fs.existsSync(inputDir)) {
+      throw new Error(`Input directory not found: ${inputDir}`);
+    }
+    
+    // Create output directory if needed
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+    
+    // Find files matching pattern
+    const files = fs.readdirSync(inputDir).filter(f => 
+      f.toLowerCase().endsWith(`.${fromFmt}`)
+    );
+    
+    const results = {
+      input_directory: inputDir,
+      output_directory: outputDir,
+      conversion: `${fromFmt} → ${toFmt}`,
+      files_found: files.length,
+      successful: 0,
+      failed: 0,
+      converted_files: [] as string[],
+      errors: [] as { file: string; error: string }[],
+    };
+    
+    for (const file of files) {
+      const inputPath = path.join(inputDir, file);
+      const baseName = path.basename(file, `.${fromFmt}`);
+      const outputPath = path.join(outputDir, `${baseName}.${toFmt}`);
+      
+      try {
+        // Determine conversion function
+        let conversionResult: any;
+        
+        if (fromFmt === 'xlsx' && toFmt === 'csv') {
+          conversionResult = await xlsxToCsv({ file_path: inputPath, output_path: outputPath });
+        } else if (fromFmt === 'csv' && toFmt === 'xlsx') {
+          conversionResult = await csvToXlsx({ file_path: inputPath, output_path: outputPath });
+        } else if (fromFmt === 'docx' && toFmt === 'md') {
+          conversionResult = await docxToMd({ file_path: inputPath, output_path: outputPath });
+        } else if (fromFmt === 'md' && toFmt === 'docx') {
+          conversionResult = await mdToDocx({ markdown_file: inputPath, output_path: outputPath });
+        } else {
+          throw new Error(`Conversion ${fromFmt} → ${toFmt} not supported in batch mode`);
+        }
+        
+        if (typeof conversionResult === 'string' && conversionResult.startsWith('Successfully')) {
+          results.successful++;
+          results.converted_files.push(file);
+        } else {
+          results.failed++;
+          results.errors.push({ file, error: String(conversionResult) });
+        }
+      } catch (e: any) {
+        results.failed++;
+        results.errors.push({ file, error: e.message });
+      }
+    }
+    
+    return results;
+    
+  } catch (error: any) {
+    return {
+      success: false,
+      error: `Batch conversion failed: ${error.message}`,
+    };
+  }
 }
