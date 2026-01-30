@@ -5,7 +5,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Skills](https://img.shields.io/badge/Skills-60+-blue.svg)](#skills)
+[![Skills](https://img.shields.io/badge/Skills-136+-blue.svg)](#skills)
 
 ---
 
@@ -19,6 +19,7 @@
   - [Finance & Business](#finance--business)
   - [Communication & Writing](#communication--writing)
   - [Productivity](#productivity)
+  - [PDF Power Tools](#pdf-power-tools)
   - [Document Processing (Official)](#document-processing-official)
   - [Core Document Skills](#core-document-skills)
   - [Document Conversion Skills](#document-conversion-skills)
@@ -26,6 +27,22 @@
   - [Presentation Skills](#presentation-skills)
   - [Template Skills](#template-skills)
   - [Workflow & Automation Skills](#workflow--automation-skills)
+  - [CRM & Sales Automation](#crm--sales-automation)
+  - [Marketing & Advertising](#marketing--advertising)
+  - [E-commerce](#e-commerce)
+  - [Communication & Messaging](#communication--messaging)
+  - [Project Management](#project-management)
+  - [Customer Support](#customer-support)
+  - [Financial Analysis](#financial-analysis)
+  - [Accounting & Payments](#accounting--payments)
+  - [Data Engineering](#data-engineering)
+  - [Research & Intelligence](#research--intelligence)
+  - [Visual & Creative](#visual--creative)
+  - [Media & Content](#media--content)
+  - [Smart Home & IoT](#smart-home--iot)
+  - [DevOps & Security](#devops--security)
+  - [HR & Operations](#hr--operations)
+  - [AI & Agents](#ai--agents)
 - [Creating Skills](#creating-skills)
 - [Advanced Usage](#advanced-usage)
 - [Contributing](#contributing)
@@ -70,7 +87,7 @@ claude
 ### Using Skills via Direct Link
 
 ```
-Please use this skill: https://raw.githubusercontent.com/claude-office-skills/all-in-one-skills/main/contract-review/SKILL.md
+Please use this skill: https://raw.githubusercontent.com/claude-office-skills/skills/main/contract-review/SKILL.md
 
 Then review my contract: [upload file]
 ```
@@ -94,7 +111,7 @@ response = client.messages.create(
 
 ### Using Skills with Moltbot (Clawdbot)
 
-One-click install all 60+ Office Skills to your [Moltbot](https://molt.bot):
+One-click install all 136+ Office Skills to your [Moltbot](https://molt.bot):
 
 ```bash
 # Install ALL skills
@@ -268,6 +285,161 @@ Based on workflow automation platforms.
 | **Office MCP** | office-mcp | - | Word/Excel/PPT MCP operations | [View](./office-mcp/) |
 | **Batch Processor** | custom | - | Bulk document processing | [View](./batch-processor/) |
 | **Doc Pipeline** | custom | - | Document workflow pipeline | [View](./doc-pipeline/) |
+| **Webhook Automation** | - | - | Build webhook integrations | [View](./webhook-automation/) |
+| **Browser Automation** | Puppeteer | - | Web scraping & testing | [View](./browser-automation/) |
+
+### CRM & Sales Automation
+
+| Skill | Description | Platform | Link |
+|-------|-------------|----------|------|
+| **CRM Automation** | Multi-CRM workflows (HubSpot, Salesforce) | HubSpot/SF | [View](./crm-automation/) |
+| **Pipedrive Automation** | Deal management, pipeline tracking | Pipedrive | [View](./pipedrive-automation/) |
+| **Lead Routing** | Intelligent lead assignment | Multi | [View](./lead-routing/) |
+| **Customer Success** | Onboarding, health scoring, retention | Multi | [View](./customer-success/) |
+
+### Marketing & Advertising
+
+| Skill | Description | Platform | Link |
+|-------|-------------|----------|------|
+| **Google Ads Manager** | Campaign management, keyword research | Google | [View](./google-ads-manager/) |
+| **Facebook/Meta Ads** | FB & Instagram advertising | Meta | [View](./facebook-ads/) |
+| **TikTok Marketing** | Content strategy, posting, analytics | TikTok | [View](./tiktok-marketing/) |
+| **LinkedIn Automation** | B2B marketing, lead generation | LinkedIn | [View](./linkedin-automation/) |
+| **Twitter/X Automation** | Social media management | Twitter | [View](./twitter-automation/) |
+| **Mailchimp Automation** | Email marketing campaigns | Mailchimp | [View](./mailchimp-automation/) |
+| **Email Marketing** | Multi-platform email automation | Multi | [View](./email-marketing/) |
+| **SEO Optimizer** | SEO strategy and optimization | - | [View](./seo-optimizer/) |
+| **Ads Copywriter** | Multi-platform ad copy generation | Multi | [View](./ads-copywriter/) |
+| **Social Publisher** | Cross-platform social publishing | Multi | [View](./social-publisher/) |
+
+### E-commerce
+
+| Skill | Description | Platform | Link |
+|-------|-------------|----------|------|
+| **Shopify Automation** | Orders, inventory, customers | Shopify | [View](./shopify-automation/) |
+| **WooCommerce Automation** | WordPress e-commerce automation | WooCommerce | [View](./woocommerce-automation/) |
+| **Amazon Seller** | FBA, inventory, PPC management | Amazon | [View](./amazon-seller/) |
+
+### Communication & Messaging
+
+| Skill | Description | Platform | Link |
+|-------|-------------|----------|------|
+| **Slack Workflows** | Slack automation & integrations | Slack | [View](./slack-workflows/) |
+| **Microsoft Teams** | Teams messaging & meetings | Teams | [View](./microsoft-teams/) |
+| **Discord Bot** | Community management & bots | Discord | [View](./discord-bot/) |
+| **Telegram Bot** | Bot development & automation | Telegram | [View](./telegram-bot/) |
+| **WhatsApp Automation** | Business messaging & support | WhatsApp | [View](./whatsapp-automation/) |
+| **Twilio SMS** | SMS & voice automation | Twilio | [View](./twilio-sms/) |
+
+### Project Management
+
+| Skill | Description | Platform | Link |
+|-------|-------------|----------|------|
+| **Jira Automation** | Issue tracking, sprints | Jira | [View](./jira-automation/) |
+| **Asana Automation** | Task & project management | Asana | [View](./asana-automation/) |
+| **Monday.com Automation** | Work management platform | Monday | [View](./monday-automation/) |
+| **Linear Automation** | Engineering issue tracking | Linear | [View](./linear-automation/) |
+| **Trello Automation** | Kanban board management | Trello | [View](./trello-automation/) |
+| **ClickUp Automation** | All-in-one productivity | ClickUp | [View](./clickup-automation/) |
+| **Notion Automation** | Database & wiki automation | Notion | [View](./notion-automation/) |
+| **Airtable Automation** | Database automation | Airtable | [View](./airtable-automation/) |
+
+### Customer Support
+
+| Skill | Description | Platform | Link |
+|-------|-------------|----------|------|
+| **Zendesk Automation** | Ticket management & routing | Zendesk | [View](./zendesk-automation/) |
+| **Intercom Automation** | Customer messaging & support | Intercom | [View](./intercom-automation/) |
+
+### Financial Analysis
+
+| Skill | Description | Department | Link |
+|-------|-------------|------------|------|
+| **Stock Analysis** | Stock research & analysis | Finance | [View](./stock-analysis/) |
+| **DCF Valuation** | Discounted cash flow models | Finance | [View](./dcf-valuation/) |
+| **Financial Modeling** | Build financial models | Finance | [View](./financial-modeling/) |
+| **Company Research** | Company deep research | Finance | [View](./company-research/) |
+| **Investment Memo** | Write investment memos | Finance | [View](./investment-memo/) |
+| **Crypto Report** | Cryptocurrency analysis | Finance | [View](./crypto-report/) |
+| **SaaS Metrics** | MRR, ARR, churn analysis | Finance | [View](./saas-metrics/) |
+
+### Accounting & Payments
+
+| Skill | Description | Platform | Link |
+|-------|-------------|----------|------|
+| **QuickBooks Automation** | Bookkeeping & accounting | QuickBooks | [View](./quickbooks-automation/) |
+| **Stripe Payments** | Payment processing & subscriptions | Stripe | [View](./stripe-payments/) |
+| **Invoice Automation** | Multi-platform invoicing | Multi | [View](./invoice-automation/) |
+| **Expense Tracker** | Receipt processing & tracking | Multi | [View](./expense-tracker/) |
+| **Subscription Management** | SaaS billing lifecycle | Multi | [View](./subscription-management/) |
+
+### Data Engineering
+
+| Skill | Description | Use Case | Link |
+|-------|-------------|----------|------|
+| **ETL Pipeline** | Extract, Transform, Load workflows | Data | [View](./etl-pipeline/) |
+| **Database Sync** | Cross-database synchronization | Data | [View](./database-sync/) |
+| **Sheets Automation** | Google Sheets workflows | Productivity | [View](./sheets-automation/) |
+| **Gmail Workflows** | Email automation & organization | Productivity | [View](./gmail-workflows/) |
+| **Calendar Automation** | Scheduling & time management | Productivity | [View](./calendar-automation/) |
+
+### Research & Intelligence
+
+| Skill | Description | Use Case | Link |
+|-------|-------------|----------|------|
+| **Deep Research** | Multi-source deep research | Research | [View](./deep-research/) |
+| **Web Search** | Intelligent web search | Research | [View](./web-search/) |
+| **Academic Search** | Scholarly paper research | Research | [View](./academic-search/) |
+| **Competitive Analysis** | Competitor research | Strategy | [View](./competitive-analysis/) |
+| **News Monitor** | News tracking & alerts | Intelligence | [View](./news-monitor/) |
+
+### Visual & Creative
+
+| Skill | Description | Use Case | Link |
+|-------|-------------|----------|------|
+| **Image Generation** | AI image creation | Creative | [View](./image-generation/) |
+| **Diagram Creator** | Technical diagrams | Documentation | [View](./diagram-creator/) |
+| **Chart Designer** | Data visualization | Analytics | [View](./chart-designer/) |
+| **Infographic** | Infographic design | Marketing | [View](./infographic/) |
+| **PPT Visual** | Presentation visuals | Presentations | [View](./ppt-visual/) |
+
+### Media & Content
+
+| Skill | Description | Platform | Link |
+|-------|-------------|----------|------|
+| **YouTube Automation** | Video management & analytics | YouTube | [View](./youtube-automation/) |
+| **Podcast Automation** | Podcast production workflows | Multi | [View](./podcast-automation/) |
+| **Transcription** | Audio/video transcription | Multi | [View](./transcription-automation/) |
+
+### Smart Home & IoT
+
+| Skill | Description | Platform | Link |
+|-------|-------------|----------|------|
+| **Home Assistant** | Smart home automation | HA | [View](./home-assistant/) |
+| **Spotify Automation** | Music playback & playlists | Spotify | [View](./spotify-automation/) |
+| **Weather Automation** | Weather-based workflows | Multi | [View](./weather-automation/) |
+| **Apple Shortcuts** | iOS/macOS automation | Apple | [View](./apple-shortcuts/) |
+
+### DevOps & Security
+
+| Skill | Description | Use Case | Link |
+|-------|-------------|----------|------|
+| **DevOps Automation** | CI/CD & infrastructure | DevOps | [View](./devops-automation/) |
+| **Security Monitoring** | Threat detection & response | Security | [View](./security-monitoring/) |
+
+### HR & Operations
+
+| Skill | Description | Department | Link |
+|-------|-------------|------------|------|
+| **HR Automation** | Recruiting & onboarding workflows | HR | [View](./hr-automation/) |
+| **DocuSign Automation** | E-signature workflows | Legal/Ops | [View](./docusign-automation/) |
+
+### AI & Agents
+
+| Skill | Description | Use Case | Link |
+|-------|-------------|----------|------|
+| **AI Agent Builder** | Design multi-step AI agents | Development | [View](./ai-agent-builder/) |
+| **Obsidian Automation** | Knowledge management | PKM | [View](./obsidian-automation/) |
 
 ---
 
@@ -362,11 +534,12 @@ We welcome contributions! **No coding required** - just write clear instructions
 See our [Skill Roadmap](SKILL_ROADMAP.md) for planned skills and [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 Future skill ideas:
-- [ ] **Financial Model** - DCF and valuation templates
 - [ ] **Privacy Policy** - GDPR/CCPA compliant policies
 - [ ] **Terms of Service** - Fair, legally-sound ToS
 - [ ] **Project Brief** - Project scope and requirements
-- [ ] **Presentation Script** - Compelling presentation narratives
+- [ ] **Signal Integration** - Privacy-focused messaging
+- [ ] **Sonos/Audio** - Multi-room audio control
+- [ ] **3D Printing** - Printer management & slicing
 
 ---
 
