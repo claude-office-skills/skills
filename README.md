@@ -5,7 +5,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Skills](https://img.shields.io/badge/Skills-30+-blue.svg)](#skills)
+[![Skills](https://img.shields.io/badge/Skills-60+-blue.svg)](#skills)
 
 ---
 
@@ -19,7 +19,13 @@
   - [Finance & Business](#finance--business)
   - [Communication & Writing](#communication--writing)
   - [Productivity](#productivity)
-  - [Document Processing](#document-processing)
+  - [Document Processing (Official)](#document-processing-official)
+  - [Core Document Skills](#core-document-skills)
+  - [Document Conversion Skills](#document-conversion-skills)
+  - [Document Parsing & OCR Skills](#document-parsing--ocr-skills)
+  - [Presentation Skills](#presentation-skills)
+  - [Template Skills](#template-skills)
+  - [Workflow & Automation Skills](#workflow--automation-skills)
 - [Creating Skills](#creating-skills)
 - [Advanced Usage](#advanced-usage)
 - [Contributing](#contributing)
@@ -84,6 +90,27 @@ response = client.messages.create(
     system=skill_content,
     messages=[{"role": "user", "content": "Review this contract..."}]
 )
+```
+
+### Using Skills with Moltbot (Clawdbot)
+
+One-click install all 60+ Office Skills to your [Moltbot](https://molt.bot):
+
+```bash
+# Install ALL skills
+curl -fsSL https://raw.githubusercontent.com/claude-office-skills/skills/main/install.sh | bash
+
+# Install by category
+curl -fsSL https://raw.githubusercontent.com/claude-office-skills/skills/main/install.sh | bash -s -- --category legal
+curl -fsSL https://raw.githubusercontent.com/claude-office-skills/skills/main/install.sh | bash -s -- --category pdf
+curl -fsSL https://raw.githubusercontent.com/claude-office-skills/skills/main/install.sh | bash -s -- --category workflow
+```
+
+Available categories: `legal`, `hr`, `finance`, `pdf`, `workflow`, `template`, `doc`, `conversion`, `parsing`, `slide`, `productivity`, `marketing`
+
+Or install a single skill via chat:
+```
+Install this skill: https://raw.githubusercontent.com/claude-office-skills/skills/main/contract-review/SKILL.md
 ```
 
 ---
@@ -169,6 +196,78 @@ Official Anthropic skills for working with Office documents. See [official-skill
 | **XLSX** | Excel spreadsheets, formulas, financial models | Finance/Ops | [Source-available](./official-skills/xlsx-guide.md) |
 | **PPTX** | PowerPoint presentations | Marketing/All | [Source-available](./official-skills/pptx-guide.md) |
 | **PDF** | PDF processing, forms, extraction | All | [Source-available](./official-skills/pdf-guide.md) |
+
+### Core Document Skills
+
+Based on Python libraries for native Office document manipulation.
+
+| Skill | Library | Stars | Description | Link |
+|-------|---------|-------|-------------|------|
+| **DOCX Manipulation** | python-docx | 5.4k | Create/edit Word documents programmatically | [View](./docx-manipulation/) |
+| **PPTX Manipulation** | python-pptx | 3.2k | Create/edit PowerPoint presentations | [View](./pptx-manipulation/) |
+| **XLSX Manipulation** | openpyxl | 3.8k | Create/edit Excel spreadsheets | [View](./xlsx-manipulation/) |
+| **Excel Automation** | xlwings | 3.3k | Advanced Excel automation with Python | [View](./excel-automation/) |
+| **PDF Extraction** | pdfplumber | 9.6k | Extract text, tables from PDFs | [View](./pdf-extraction/) |
+
+### Document Conversion Skills
+
+Based on document format conversion tools.
+
+| Skill | Library | Stars | Description | Link |
+|-------|---------|-------|-------------|------|
+| **MD to Office** | pandoc | 42k | Convert Markdown to Word/PPT/PDF | [View](./md-to-office/) |
+| **Office to MD** | markitdown | 86k | Convert Office docs to Markdown (Microsoft) | [View](./office-to-md/) |
+| **PDF to DOCX** | pdf2docx | 3.3k | Convert PDF to editable Word | [View](./pdf-to-docx/) |
+| **HTML to PPT** | marp-cli | 3.1k | Convert HTML/Markdown to presentations | [View](./html-to-ppt/) |
+| **Batch Convert** | multi-format | - | Multi-format batch conversion pipeline | [View](./batch-convert/) |
+
+### Document Parsing & OCR Skills
+
+Based on document parsing and OCR libraries.
+
+| Skill | Library | Stars | Description | Link |
+|-------|---------|-------|-------------|------|
+| **Smart OCR** | PaddleOCR | 69k | OCR for 100+ languages | [View](./smart-ocr/) |
+| **Doc Parser** | docling | 51.5k | IBM's document parser for complex layouts | [View](./doc-parser/) |
+| **Layout Analyzer** | surya | 19k | Analyze document structure and layout | [View](./layout-analyzer/) |
+| **Data Extractor** | unstructured | 14k | Extract data from any document format | [View](./data-extractor/) |
+| **Table Extractor** | camelot | 4.2k | Extract tables from PDFs accurately | [View](./table-extractor/) |
+
+### Presentation Skills
+
+Based on presentation generation tools.
+
+| Skill | Library | Stars | Description | Link |
+|-------|---------|-------|-------------|------|
+| **HTML Slides** | reveal.js | 70.5k | Create HTML-based presentations | [View](./html-slides/) |
+| **Dev Slides** | slidev | 44k | Developer-friendly Vue-based slides | [View](./dev-slides/) |
+| **MD Slides** | marp | 3.1k | Markdown to PDF/PPTX presentations | [View](./md-slides/) |
+| **Report Generator** | gilfoyle | - | Generate data reports automatically | [View](./report-generator/) |
+| **AI Slides** | sli-ai | - | AI-powered slide generation | [View](./ai-slides/) |
+
+### Template Skills
+
+Based on document template engines.
+
+| Skill | Library | Stars | Description | Link |
+|-------|---------|-------|-------------|------|
+| **CV Builder** | rendercv | 15.4k | YAML to PDF resume generator | [View](./cv-builder/) |
+| **Form Builder** | docassemble | 919 | Interactive form builder | [View](./form-builder/) |
+| **Contract Template** | accord-project | 322 | Smart contract templates | [View](./contract-template/) |
+| **Invoice Template** | easy-invoice | 476 | PDF invoice generation | [View](./invoice-template/) |
+| **Template Engine** | docxtpl | 2.1k | Document auto-fill engine | [View](./template-engine/) |
+
+### Workflow & Automation Skills
+
+Based on workflow automation platforms.
+
+| Skill | Library | Stars | Description | Link |
+|-------|---------|-------|-------------|------|
+| **n8n Workflow** | n8n | 172k | 7800+ workflow templates | [View](./n8n-workflow/) |
+| **MCP Hub** | mcp-servers | 40k+ | 1200+ AI Agent tools | [View](./mcp-hub/) |
+| **Office MCP** | office-mcp | - | Word/Excel/PPT MCP operations | [View](./office-mcp/) |
+| **Batch Processor** | custom | - | Bulk document processing | [View](./batch-processor/) |
+| **Doc Pipeline** | custom | - | Document workflow pipeline | [View](./doc-pipeline/) |
 
 ---
 
