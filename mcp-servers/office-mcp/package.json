@@ -34,11 +34,14 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
+    "docx": "^9.5.1",
+    "docxtemplater": "^3.67.6",
     "mammoth": "^1.6.0",
     "marked": "^12.0.0",
     "pandoc": "^0.2.0",
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^1.1.1",
+    "pizzip": "^3.2.0",
     "pptx-parser": "^1.0.0",
     "turndown": "^7.1.2",
     "xlsx": "^0.18.5"
