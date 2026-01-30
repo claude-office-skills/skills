@@ -6,17 +6,17 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Skills](https://img.shields.io/badge/Skills-136+-blue.svg)](#skills)
-[![MCP Tools](https://img.shields.io/badge/MCP_Tools-37-green.svg)](#office-mcp-server)
+[![MCP Tools](https://img.shields.io/badge/MCP_Tools-39-green.svg)](#office-mcp-server)
 
 ---
 
 ## 🚀 NEW: Office MCP Server
 
-**37 fully-implemented tools** for Office document operations via MCP (Model Context Protocol).
+**39 fully-implemented tools** for Office document operations via MCP (Model Context Protocol).
 
 | Module | Tools | Capabilities |
 |--------|-------|--------------|
-| **PDF** | 8 | Extract, merge, split, compress, watermark, forms |
+| **PDF** | 10 | Extract, merge, split, compress, watermark, forms, **OCR** |
 | **Spreadsheet** | 7 | Read/write Excel, analyze, formulas, pivot tables |
 | **Document** | 6 | Create/edit Word, templates, merge documents |
 | **Conversion** | 9 | xlsx⇔csv, docx⇔md, json→xlsx, batch convert |

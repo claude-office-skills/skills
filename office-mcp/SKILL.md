@@ -5,8 +5,8 @@
 
 # Basic Information
 name: office-mcp
-description: "MCP server with 37 tools for Word, Excel, PowerPoint, PDF operations"
-version: "2.0"
+description: "MCP server with 39 tools for Word, Excel, PowerPoint, PDF, OCR operations"
+version: "2.1"
 author: claude-office-skills
 license: MIT
 
@@ -52,11 +52,11 @@ languages:
 
 ## Overview
 
-A complete MCP (Model Context Protocol) server providing **37 tools** for Office document operations. Implemented in TypeScript/Node.js with real functionality (not placeholders).
+A complete MCP (Model Context Protocol) server providing **39 tools** for Office document operations. Implemented in TypeScript/Node.js with real functionality (not placeholders).
 
 ## Tool Categories
 
-### PDF Tools (8)
+### PDF Tools (10)
 | Tool | Description |
 |------|-------------|
 | `extract_text_from_pdf` | Extract text content, supports page selection |
@@ -67,6 +67,8 @@ A complete MCP (Model Context Protocol) server providing **37 tools** for Office
 | `add_watermark_to_pdf` | Add text/image watermarks |
 | `fill_pdf_form` | Fill PDF form fields |
 | `get_pdf_metadata` | Get PDF properties and metadata |
+| `ocr_pdf` | OCR on scanned PDFs (multi-language) |
+| `ocr_image` | OCR on image files (PNG, JPG, TIFF, etc.) |
 
 ### Spreadsheet Tools (7)
 | Tool | Description |
@@ -152,12 +154,23 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 
 ```
 pdf-parse, pdf-lib       - PDF operations
+tesseract.js             - OCR (pure JavaScript, no native binary needed)
 xlsx                     - Excel operations
 mammoth, docx            - Word operations
 docxtemplater, pizzip    - Template filling
 pptxgenjs, jszip         - PowerPoint operations
 turndown, marked         - Markdown conversion
 ```
+
+### Supported OCR Languages
+- `eng` - English
+- `chi_sim` - Simplified Chinese
+- `chi_tra` - Traditional Chinese
+- `jpn` - Japanese
+- `kor` - Korean
+- `fra` - French
+- `deu` - German
+- `spa` - Spanish
 
 ## Resources
 
