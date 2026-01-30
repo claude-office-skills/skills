@@ -5,8 +5,8 @@
 
 # Basic Information
 name: office-mcp
-description: "MCP server for Word, Excel, PowerPoint operations via AI"
-version: "1.0"
+description: "MCP server with 37 tools for Word, Excel, PowerPoint, PDF operations"
+version: "2.0"
 author: claude-office-skills
 license: MIT
 
@@ -15,7 +15,10 @@ category: workflow
 tags:
   - office
   - mcp
-  - tools
+  - pdf
+  - excel
+  - word
+  - powerpoint
   - automation
 department: All
 
@@ -33,6 +36,11 @@ models:
 capabilities:
   - office_automation
   - mcp_tools
+  - pdf_processing
+  - spreadsheet_analysis
+  - document_generation
+  - presentation_creation
+  - format_conversion
 
 # Language Support
 languages:
@@ -40,92 +48,119 @@ languages:
   - zh
 ---
 
-# Office Mcp Skill
+# Office MCP Server
 
 ## Overview
 
-This skill wraps Office document operations as MCP tools, allowing Claude to create, edit, and manipulate Word, Excel, and PowerPoint files with standardized interfaces.
+A complete MCP (Model Context Protocol) server providing **37 tools** for Office document operations. Implemented in TypeScript/Node.js with real functionality (not placeholders).
 
-## How to Use
+## Tool Categories
 
-1. Describe what you want to accomplish
-2. Provide any required input data or files
-3. I'll execute the appropriate operations
+### PDF Tools (8)
+| Tool | Description |
+|------|-------------|
+| `extract_text_from_pdf` | Extract text content, supports page selection |
+| `extract_tables_from_pdf` | Extract table data from PDFs |
+| `merge_pdfs` | Merge multiple PDFs into one |
+| `split_pdf` | Split PDF by page ranges |
+| `compress_pdf` | Reduce PDF file size |
+| `add_watermark_to_pdf` | Add text/image watermarks |
+| `fill_pdf_form` | Fill PDF form fields |
+| `get_pdf_metadata` | Get PDF properties and metadata |
 
-**Example prompts:**
-- "Create Word documents with AI-generated content"
-- "Build Excel spreadsheets with formulas"
-- "Generate PowerPoint presentations"
-- "Batch edit Office documents"
+### Spreadsheet Tools (7)
+| Tool | Description |
+|------|-------------|
+| `read_xlsx` | Read Excel files with sheet/range selection |
+| `create_xlsx` | Create multi-sheet Excel files |
+| `analyze_spreadsheet` | Statistical analysis (min/max/mean/median) |
+| `apply_formula` | Apply Excel formulas to cells |
+| `create_chart` | Generate chart configurations |
+| `pivot_table` | Create pivot tables with aggregation |
+| `xlsx_to_json` | Convert Excel to JSON |
 
-## Domain Knowledge
+### Document Tools (6)
+| Tool | Description |
+|------|-------------|
+| `extract_text_from_docx` | Extract text from Word documents |
+| `create_docx` | Create DOCX with headings, lists, tables |
+| `fill_docx_template` | Fill templates with {{placeholders}} |
+| `analyze_document_structure` | Analyze headings, tables, word count |
+| `insert_table_to_docx` | Insert tables into documents |
+| `merge_docx_files` | Merge multiple Word documents |
 
+### Conversion Tools (9)
+| Tool | Description |
+|------|-------------|
+| `xlsx_to_csv` | Convert Excel to CSV |
+| `csv_to_xlsx` | Convert CSV to Excel |
+| `json_to_xlsx` | Convert JSON arrays to Excel |
+| `docx_to_md` | Convert Word to Markdown |
+| `md_to_docx` | Convert Markdown to Word |
+| `pdf_to_docx` | Convert PDF to Word (text extraction) |
+| `docx_to_pdf` | Convert Word to PDF (external tool required) |
+| `html_to_pdf` | Convert HTML to PDF (external tool required) |
+| `batch_convert` | Batch convert multiple files |
 
-### Office MCP Tools
-
-| Tool | Input | Output |
-|------|-------|--------|
-| `create_docx` | Title, sections, styles | .docx file |
-| `edit_docx` | Path, changes | Updated .docx |
-| `create_xlsx` | Data, formulas | .xlsx file |
-| `create_pptx` | Slides, layout | .pptx file |
-
-### Integration with Claude Skills
-
-```markdown
-# Example: Combining Skills + MCP
-
-User: "Create a sales report from this data"
-
-1. Data Analysis Skill → Analyze data
-2. office-mcp/create_docx → Generate Word report
-3. office-mcp/create_xlsx → Generate Excel summary
-4. office-mcp/create_pptx → Generate PowerPoint deck
-```
-
-### MCP Server Implementation
-
-```python
-from mcp import Server
-from docx import Document
-from openpyxl import Workbook
-
-server = Server("office-mcp")
-
-@server.tool("create_docx")
-async def create_docx(title: str, content: str, output_path: str):
-    doc = Document()
-    doc.add_heading(title, 0)
-    doc.add_paragraph(content)
-    doc.save(output_path)
-    return {"status": "success", "path": output_path}
-
-@server.tool("create_xlsx")
-async def create_xlsx(data: list, output_path: str):
-    wb = Workbook()
-    ws = wb.active
-    for row in data:
-        ws.append(row)
-    wb.save(output_path)
-    return {"status": "success", "path": output_path}
-```
-
-
-## Best Practices
-
-1. **Validate inputs before document operations**
-2. **Use temp files for large documents**
-3. **Return structured responses with file paths**
-4. **Handle errors gracefully with meaningful messages**
+### Presentation Tools (7)
+| Tool | Description |
+|------|-------------|
+| `create_pptx` | Create PowerPoint with themes |
+| `extract_from_pptx` | Extract text and images from PPTX |
+| `md_to_pptx` | Convert Markdown to slides |
+| `add_slide` | Add slides to existing presentations |
+| `update_slide` | Update slide content |
+| `pptx_to_html` | Convert to reveal.js HTML |
+| `get_pptx_outline` | Get presentation structure |
 
 ## Installation
 
+### 1. Clone and Build
+
 ```bash
-# Install required dependencies
-pip install python-docx openpyxl python-pptx reportlab jinja2
+cd mcp-servers/office-mcp
+npm install
+npm run build
+```
+
+### 2. Configure Claude Desktop
+
+Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "office-mcp": {
+      "command": "/usr/local/bin/node",
+      "args": ["/path/to/claude-office-skills/mcp-servers/office-mcp/dist/index.js"]
+    }
+  }
+}
+```
+
+### 3. Restart Claude Desktop
+
+## Example Prompts
+
+- "Read the Excel file at ~/Documents/sales.xlsx"
+- "Create a PowerPoint with 5 slides about AI trends"
+- "Extract text from this PDF and convert to Markdown"
+- "Merge these 3 Word documents into one"
+- "Analyze the data in this spreadsheet"
+
+## Dependencies
+
+```
+pdf-parse, pdf-lib       - PDF operations
+xlsx                     - Excel operations
+mammoth, docx            - Word operations
+docxtemplater, pizzip    - Template filling
+pptxgenjs, jszip         - PowerPoint operations
+turndown, marked         - Markdown conversion
 ```
 
 ## Resources
 
-- [Office MCP Repository](https://github.com/anthropics/skills)
+- [MCP Server Code](https://github.com/claude-office-skills/skills/tree/main/mcp-servers/office-mcp)
+- [Implementation Plan](./mcp-servers/office-mcp/IMPLEMENTATION_PLAN.md)
 - [Claude Office Skills Hub](https://github.com/claude-office-skills/skills)

@@ -6,6 +6,28 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Skills](https://img.shields.io/badge/Skills-136+-blue.svg)](#skills)
+[![MCP Tools](https://img.shields.io/badge/MCP_Tools-37-green.svg)](#office-mcp-server)
+
+---
+
+## 🚀 NEW: Office MCP Server
+
+**37 fully-implemented tools** for Office document operations via MCP (Model Context Protocol).
+
+| Module | Tools | Capabilities |
+|--------|-------|--------------|
+| **PDF** | 8 | Extract, merge, split, compress, watermark, forms |
+| **Spreadsheet** | 7 | Read/write Excel, analyze, formulas, pivot tables |
+| **Document** | 6 | Create/edit Word, templates, merge documents |
+| **Conversion** | 9 | xlsx⇔csv, docx⇔md, json→xlsx, batch convert |
+| **Presentation** | 7 | Create PPT, extract, Markdown→slides, HTML export |
+
+**Quick Start:**
+```bash
+cd mcp-servers/office-mcp && npm install && npm run build
+```
+
+[📖 Full MCP Documentation](./office-mcp/SKILL.md) | [💻 MCP Source Code](./mcp-servers/office-mcp/)
 
 ---
 
