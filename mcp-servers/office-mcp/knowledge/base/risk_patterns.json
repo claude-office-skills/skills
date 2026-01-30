@@ -1,0 +1,112 @@
+{
+  "version": "1.0",
+  "description": "Base risk patterns for contract review",
+  "author": "claude-office-skills",
+  
+  "risk_patterns": {
+    "unlimited_liability": {
+      "id": "unlimited_liability",
+      "name": "Unlimited Liability",
+      "name_zh": "无限责任",
+      "severity": "high",
+      "category": "liability",
+      "keywords": ["unlimited liability", "full responsibility", "all damages", "any and all losses"],
+      "keywords_zh": ["无限责任", "全部责任", "一切损失", "全部损害"],
+      "description": "Contract may expose party to unlimited financial liability",
+      "description_zh": "合同可能使一方承担无限的经济责任",
+      "recommendation": "Add liability cap (e.g., 12 months of fees or contract value)",
+      "recommendation_zh": "添加责任上限（如12个月费用或合同金额）"
+    },
+    "unfair_termination": {
+      "id": "unfair_termination",
+      "name": "Unfair Termination",
+      "name_zh": "不公平终止条款",
+      "severity": "medium",
+      "category": "termination",
+      "keywords": ["terminate at will", "immediate termination", "without cause", "sole discretion"],
+      "keywords_zh": ["随时终止", "立即终止", "无需理由", "单方决定"],
+      "description": "Termination clauses may be one-sided or unfair",
+      "description_zh": "终止条款可能是单方面的或不公平的",
+      "recommendation": "Ensure mutual termination rights with reasonable notice period",
+      "recommendation_zh": "确保双方都有终止权，并有合理的通知期"
+    },
+    "broad_ip_assignment": {
+      "id": "broad_ip_assignment",
+      "name": "Broad IP Assignment",
+      "name_zh": "宽泛的知识产权转让",
+      "severity": "high",
+      "category": "intellectual_property",
+      "keywords": ["work for hire", "assign all rights", "intellectual property transfer", "all inventions"],
+      "keywords_zh": ["职务作品", "转让全部权利", "知识产权转让", "所有发明"],
+      "description": "Intellectual property rights may be transferred without adequate protection",
+      "description_zh": "知识产权可能在没有充分保护的情况下被转让",
+      "recommendation": "Exclude pre-existing IP and clearly define scope of assignment",
+      "recommendation_zh": "排除已有知识产权，明确转让范围"
+    },
+    "perpetual_confidentiality": {
+      "id": "perpetual_confidentiality",
+      "name": "Perpetual Confidentiality",
+      "name_zh": "永久保密义务",
+      "severity": "medium",
+      "category": "confidentiality",
+      "keywords": ["perpetual confidentiality", "indefinitely", "all information", "unlimited duration"],
+      "keywords_zh": ["永久保密", "无限期", "所有信息", "无限制期限"],
+      "description": "Confidentiality obligations may be overly broad or perpetual",
+      "description_zh": "保密义务可能过于宽泛或永久",
+      "recommendation": "Limit confidentiality period (typically 2-5 years)",
+      "recommendation_zh": "限制保密期限（通常2-5年）"
+    },
+    "one_sided_indemnification": {
+      "id": "one_sided_indemnification",
+      "name": "One-Sided Indemnification",
+      "name_zh": "单方面赔偿条款",
+      "severity": "high",
+      "category": "indemnification",
+      "keywords": ["indemnify and hold harmless", "defend at own expense", "all claims"],
+      "keywords_zh": ["赔偿并使免受损害", "自费辩护", "所有索赔"],
+      "description": "Indemnification obligations may be imbalanced",
+      "description_zh": "赔偿义务可能不平衡",
+      "recommendation": "Ensure mutual indemnification and reasonable scope limitations",
+      "recommendation_zh": "确保相互赔偿，并有合理的范围限制"
+    },
+    "mandatory_arbitration": {
+      "id": "mandatory_arbitration",
+      "name": "Mandatory Arbitration",
+      "name_zh": "强制仲裁",
+      "severity": "medium",
+      "category": "dispute_resolution",
+      "keywords": ["binding arbitration", "waive jury trial", "sole remedy", "exclusive arbitration"],
+      "keywords_zh": ["约束性仲裁", "放弃陪审团审判", "唯一救济", "排他性仲裁"],
+      "description": "Disputes must be resolved through arbitration",
+      "description_zh": "争议必须通过仲裁解决",
+      "recommendation": "Consider if arbitration is appropriate; ensure fair arbitrator selection",
+      "recommendation_zh": "考虑仲裁是否合适；确保仲裁员选择公平"
+    },
+    "excessive_noncompete": {
+      "id": "excessive_noncompete",
+      "name": "Excessive Non-Compete",
+      "name_zh": "过度竞业限制",
+      "severity": "high",
+      "category": "employment",
+      "keywords": ["non-compete", "not compete", "competitive business", "competitor"],
+      "keywords_zh": ["竞业限制", "不得竞争", "竞争业务", "竞争对手"],
+      "description": "Non-compete clause may be overly restrictive",
+      "description_zh": "竞业限制条款可能过于严格",
+      "recommendation": "Limit duration (1-2 years max), geographic scope",
+      "recommendation_zh": "限制期限（最长1-2年）、地域范围"
+    },
+    "auto_renewal": {
+      "id": "auto_renewal",
+      "name": "Auto-Renewal",
+      "name_zh": "自动续约",
+      "severity": "low",
+      "category": "term",
+      "keywords": ["automatically renew", "unless cancelled", "evergreen", "auto-renew"],
+      "keywords_zh": ["自动续约", "除非取消", "长青条款"],
+      "description": "Contract may automatically renew without explicit consent",
+      "description_zh": "合同可能自动续约",
+      "recommendation": "Ensure clear opt-out process",
+      "recommendation_zh": "确保有明确的退出程序"
+    }
+  }
+}

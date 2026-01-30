@@ -1,0 +1,110 @@
+{
+  "version": "1.0",
+  "description": "California-specific employment law knowledge",
+  "author": "California Employment Lawyer",
+  "extends": "../base/risk_patterns.json",
+  "jurisdiction": "california",
+  
+  "overrides": {
+    "excessive_noncompete": {
+      "severity": "critical",
+      "description": "Non-compete clauses are VOID in California under Bus. & Prof. Code § 16600",
+      "recommendation": "REMOVE the non-compete clause entirely. California courts will not enforce it.",
+      "legal_references": [
+        "Cal. Bus. & Prof. Code § 16600",
+        "Edwards v. Arthur Andersen LLP (2008) 44 Cal.4th 937"
+      ]
+    }
+  },
+  
+  "additional_patterns": {
+    "california_meal_break": {
+      "id": "california_meal_break",
+      "name": "California Meal Break Violation",
+      "name_zh": "加州用餐休息违规",
+      "severity": "high",
+      "category": "california_specific",
+      "keywords": ["meal period", "meal break", "lunch break", "30 minute", "unpaid meal"],
+      "description": "California requires a 30-minute unpaid meal break for shifts over 5 hours",
+      "recommendation": "Ensure contract allows for compliant meal breaks per Cal. Lab. Code § 512",
+      "legal_references": ["Cal. Lab. Code § 512", "Brinker Restaurant Corp. v. Superior Court"]
+    },
+    "california_rest_break": {
+      "id": "california_rest_break",
+      "name": "California Rest Break Violation",
+      "name_zh": "加州休息时间违规",
+      "severity": "high",
+      "category": "california_specific",
+      "keywords": ["rest period", "rest break", "10 minute", "paid break"],
+      "description": "California requires 10-minute paid rest breaks per 4 hours worked",
+      "recommendation": "Ensure contract allows for compliant rest breaks",
+      "legal_references": ["Cal. Lab. Code § 226.7"]
+    },
+    "california_expense_reimbursement": {
+      "id": "california_expense_reimbursement",
+      "name": "Expense Reimbursement Required",
+      "name_zh": "费用报销要求",
+      "severity": "high",
+      "category": "california_specific",
+      "keywords": ["expense", "reimbursement", "business expense", "out of pocket"],
+      "description": "California requires employers to reimburse necessary business expenses",
+      "recommendation": "Include expense reimbursement policy per Cal. Lab. Code § 2802",
+      "legal_references": ["Cal. Lab. Code § 2802"]
+    },
+    "california_section_1542_waiver": {
+      "id": "california_section_1542_waiver",
+      "name": "Section 1542 Waiver Required",
+      "name_zh": "1542条款弃权声明",
+      "severity": "critical",
+      "category": "california_specific",
+      "keywords": ["release", "waiver", "unknown claims", "general release"],
+      "description": "California releases must specifically waive Civil Code § 1542 (unknown claims)",
+      "recommendation": "Include explicit Section 1542 waiver language for valid release",
+      "legal_references": ["Cal. Civ. Code § 1542"],
+      "required_language": "A general release does not extend to claims that the creditor or releasing party does not know or suspect to exist in his or her favor at the time of executing the release and that, if known by him or her, would have materially affected his or her settlement with the debtor or released party."
+    },
+    "california_final_pay": {
+      "id": "california_final_pay",
+      "name": "Final Pay Timing",
+      "name_zh": "最终工资支付时间",
+      "severity": "medium",
+      "category": "california_specific",
+      "keywords": ["final pay", "last paycheck", "termination pay", "final wages"],
+      "description": "California requires immediate final pay upon termination, or within 72 hours if employee quits",
+      "recommendation": "Ensure termination provisions comply with Cal. Lab. Code § 201-203",
+      "legal_references": ["Cal. Lab. Code § 201", "Cal. Lab. Code § 202", "Cal. Lab. Code § 203"]
+    },
+    "california_paga_waiver": {
+      "id": "california_paga_waiver",
+      "name": "Invalid PAGA Waiver",
+      "name_zh": "无效的PAGA弃权",
+      "severity": "critical",
+      "category": "california_specific",
+      "keywords": ["PAGA", "Private Attorney General", "representative action", "class waiver"],
+      "description": "California prohibits waiver of representative PAGA claims",
+      "recommendation": "Remove any PAGA waiver provisions - they are unenforceable",
+      "legal_references": ["Iskanian v. CLS Transportation Los Angeles, LLC (2014)"]
+    }
+  },
+  
+  "completeness_additions": [
+    {
+      "id": "section_1542_waiver",
+      "name": "Section 1542 Waiver",
+      "required_for": ["severance", "settlement", "release"],
+      "description": "Explicit waiver of unknown claims under Cal. Civ. Code § 1542"
+    },
+    {
+      "id": "meal_rest_break_policy",
+      "name": "Meal/Rest Break Policy",
+      "required_for": ["employment"],
+      "description": "Clear statement on meal and rest break entitlements"
+    },
+    {
+      "id": "expense_policy",
+      "name": "Expense Reimbursement Policy",
+      "required_for": ["employment"],
+      "description": "Policy for reimbursing necessary business expenses"
+    }
+  ]
+}
