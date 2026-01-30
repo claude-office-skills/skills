@@ -1,15 +1,53 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: docx-manipulation
-description: Create, edit, and manipulate Word documents programmatically using python-docx
-author: claude-office-skills
+description: "Create, edit, and manipulate Word documents programmatically using python-docx"
 version: "1.0"
-tags: [document, word, docx, python-docx, automation]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: python-docx
-  url: https://github.com/python-openxml/python-docx
-  stars: 5.4k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: document
+tags:
+  - docx
+  - word
+  - manipulation
+  - editing
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - extract_text_from_docx
+    - fill_docx_template
+    - merge_docx_files
+
+# Skill Capabilities
+capabilities:
+  - document_creation
+  - editing
+  - template_handling
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # DOCX Manipulation Skill

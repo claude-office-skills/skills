@@ -1,15 +1,43 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: doc-pipeline
-description: Chain document operations into reusable pipelines
-author: claude-office-skills
+description: "Chain document operations into reusable pipelines"
 version: "1.0"
-tags: ['pipeline', 'workflow', 'chain', 'automation']
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: Custom
-  url: https://github.com/claude-office-skills/skills
-  stars: N/A
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: workflow
+tags:
+  - pipeline
+  - workflow
+  - document
+  - automation
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# Skill Capabilities
+capabilities:
+  - document_workflow
+  - pipeline_automation
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Doc Pipeline Skill

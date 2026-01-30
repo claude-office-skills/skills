@@ -1,11 +1,51 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: Changelog Generator
-description: Generate release notes from git commits, updates, or feature lists
-author: claude-office-skills
+description: "Generate release notes from git commits, updates, or feature lists"
 version: "1.0"
-tags: [development, product, release, documentation, git]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, text_editor]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: productivity
+tags:
+  - changelog
+  - release
+  - documentation
+  - developer
+department: Dev/PM
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - md_to_docx
+
+# Skill Capabilities
+capabilities:
+  - changelog_generation
+  - version_tracking
+  - release_notes
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Changelog Generator

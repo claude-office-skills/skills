@@ -1,10 +1,50 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: meeting-notes
-description: Transform raw meeting notes, transcripts, or recordings into structured, actionable summaries
-version: 1.0.0
+description: ">"
+version: "1.0.0"
 author: Claude Office Skills Contributors
 license: MIT
-tags: [productivity, meetings, documentation]
+
+# Categorization
+category: productivity
+tags:
+  - meeting
+  - notes
+  - summary
+  - action-items
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+
+# Skill Capabilities
+capabilities:
+  - note_structuring
+  - action_extraction
+  - summarization
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Meeting Notes

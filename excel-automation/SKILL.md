@@ -1,15 +1,53 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: excel-automation
-description: Advanced Excel automation with Python using xlwings - interact with live Excel instances
-author: claude-office-skills
+description: ">"
 version: "1.0"
-tags: [excel, automation, xlwings, macros, python]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: xlwings
-  url: https://github.com/xlwings/xlwings
-  stars: 3.3k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: spreadsheet
+tags:
+  - excel
+  - automation
+  - macro
+  - workflow
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - read_xlsx
+    - create_xlsx
+    - apply_formula
+    - pivot_table
+
+# Skill Capabilities
+capabilities:
+  - automation
+  - data_processing
+  - reporting
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Excel Automation Skill

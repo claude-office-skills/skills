@@ -1,11 +1,52 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: report-generator
-description: Generate professional data reports with charts, tables, and visualizations
-author: claude-office-skills
+description: "Generate professional data reports with charts, tables, and visualizations"
 version: "1.0"
-tags: [report, visualization, charts, data, automation]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: presentation
+tags:
+  - report
+  - generator
+  - data
+  - visualization
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - create_xlsx
+    - create_chart
+    - create_pptx
+
+# Skill Capabilities
+capabilities:
+  - report_generation
+  - data_visualization
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Report Generator Skill

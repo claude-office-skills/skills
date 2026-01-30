@@ -1,11 +1,50 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: Offer Letter Generator
-description: Create formal employment offer letters with compensation and terms
-author: claude-office-skills
+description: "Create formal employment offer letters with compensation and terms"
 version: "1.0"
-tags: [hr, recruitment, hiring, employment, legal]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [text_editor]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: hr
+tags:
+  - offer-letter
+  - hiring
+  - employment
+department: HR
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - fill_docx_template
+    - docx_to_pdf
+
+# Skill Capabilities
+capabilities:
+  - offer_generation
+  - compensation_structuring
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Offer Letter Generator

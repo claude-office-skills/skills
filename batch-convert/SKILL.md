@@ -1,11 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: batch-convert
-description: Batch convert documents between multiple formats using a unified pipeline
-author: claude-office-skills
+description: "Batch convert documents between multiple formats using a unified pipeline"
 version: "1.0"
-tags: [conversion, batch, automation, pipeline, formats]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: conversion
+tags:
+  - batch
+  - conversion
+  - bulk
+  - automation
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - batch_convert
+
+# Skill Capabilities
+capabilities:
+  - bulk_conversion
+  - automation
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Batch Convert Skill

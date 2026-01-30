@@ -1,11 +1,51 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: Chat with PDF
-description: Answer questions about PDF content, summarize, and extract information
-author: claude-office-skills
+description: "Answer questions about PDF content, summarize, and extract information"
 version: "1.0"
-tags: [pdf, document-ai, qa, summarization, extraction]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, file_operations]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: pdf
+tags:
+  - pdf
+  - chat
+  - qa
+  - extraction
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - extract_text_from_pdf
+    - get_pdf_metadata
+
+# Skill Capabilities
+capabilities:
+  - pdf_qa
+  - content_extraction
+  - summarization
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Chat with PDF

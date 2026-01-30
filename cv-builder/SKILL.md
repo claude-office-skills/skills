@@ -1,15 +1,52 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: cv-builder
-description: Generate professional CVs/resumes from YAML using rendercv - multiple templates, PDF output
-author: claude-office-skills
+description: ">"
 version: "1.0"
-tags: [resume, cv, rendercv, yaml, pdf]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: rendercv
-  url: https://github.com/sinaatalay/rendercv
-  stars: 15.4k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: hr
+tags:
+  - cv
+  - resume
+  - builder
+  - generator
+department: HR/Personal
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - docx_to_pdf
+    - fill_docx_template
+
+# Skill Capabilities
+capabilities:
+  - cv_generation
+  - formatting
+  - professional_layout
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # CV Builder Skill

@@ -1,15 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: data-extractor
-description: Extract structured data from any document format using unstructured - unified document processing
-author: claude-office-skills
+description: ">"
 version: "1.0"
-tags: [extraction, unstructured, data, parsing, documents]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: unstructured
-  url: https://github.com/Unstructured-IO/unstructured
-  stars: 14k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: parsing
+tags:
+  - extraction
+  - data
+  - unstructured
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - extract_text_from_pdf
+    - extract_tables_from_pdf
+
+# Skill Capabilities
+capabilities:
+  - data_extraction
+  - format_handling
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Data Extractor Skill

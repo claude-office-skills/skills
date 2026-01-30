@@ -1,15 +1,51 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: pdf-extraction
-description: Extract text, tables, and metadata from PDFs using pdfplumber
-author: claude-office-skills
+description: "Extract text, tables, and metadata from PDFs using pdfplumber"
 version: "1.0"
-tags: [pdf, extraction, pdfplumber, tables, text]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: pdfplumber
-  url: https://github.com/jsvine/pdfplumber
-  stars: 9.6k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: pdf
+tags:
+  - pdf
+  - extraction
+  - text
+  - tables
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - extract_text_from_pdf
+    - extract_tables_from_pdf
+
+# Skill Capabilities
+capabilities:
+  - text_extraction
+  - table_extraction
+  - data_mining
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # PDF Extraction Skill

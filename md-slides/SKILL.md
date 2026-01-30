@@ -1,15 +1,48 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: md-slides
-description: Create presentations from Markdown using Marp - simple syntax, professional output
-author: claude-office-skills
+description: ">"
 version: "1.0"
-tags: [presentation, marp, markdown, pdf, pptx]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: marp
-  url: https://github.com/marp-team/marp
-  stars: 3.1k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: presentation
+tags:
+  - markdown
+  - slides
+  - marp
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - md_to_pptx
+
+# Skill Capabilities
+capabilities:
+  - markdown_slides
+  - presentation_generation
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Markdown Slides Skill

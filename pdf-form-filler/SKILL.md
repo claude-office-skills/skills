@@ -1,11 +1,51 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: PDF Form Filler
-description: Fill out PDF forms programmatically and extract form data
-author: claude-office-skills
+description: "Fill out PDF forms programmatically and extract form data"
 version: "1.0"
-tags: [pdf, forms, automation, data-entry, fillable]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, file_operations]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: pdf
+tags:
+  - pdf
+  - form
+  - fill
+  - data-entry
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - fill_pdf_form
+    - get_pdf_metadata
+
+# Skill Capabilities
+capabilities:
+  - form_filling
+  - data_entry
+  - pdf_forms
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # PDF Form Filler

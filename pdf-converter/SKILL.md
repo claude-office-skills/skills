@@ -1,11 +1,50 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: PDF Converter
-description: Convert PDF files to and from Word, Excel, Image, and other formats
-author: claude-office-skills
+description: "Convert PDF files to and from Word, Excel, Image, and other formats"
 version: "1.0"
-tags: [pdf, conversion, document, format, export, import]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, file_operations]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: pdf
+tags:
+  - pdf
+  - conversion
+  - format
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - pdf_to_docx
+    - docx_to_pdf
+    - html_to_pdf
+
+# Skill Capabilities
+capabilities:
+  - format_conversion
+  - document_transformation
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # PDF Converter

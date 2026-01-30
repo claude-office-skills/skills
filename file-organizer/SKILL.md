@@ -1,11 +1,50 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: File Organizer
-description: Organize and rename files based on content analysis
-author: claude-office-skills
+description: "Organize and rename files based on content analysis"
 version: "1.0"
-tags: [productivity, files, organization, automation]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, file_operations]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: productivity
+tags:
+  - file
+  - organization
+  - naming
+  - structure
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - analyze_document_structure
+
+# Skill Capabilities
+capabilities:
+  - file_categorization
+  - naming_convention
+  - organization
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # File Organizer

@@ -1,15 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: table-extractor
-description: Extract tables from PDFs with high accuracy using camelot - handles complex table structures
-author: claude-office-skills
+description: ">"
 version: "1.0"
-tags: [table, extraction, camelot, pdf, data]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: camelot-py
-  url: https://github.com/camelot-dev/camelot
-  stars: 4.2k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: parsing
+tags:
+  - table
+  - extraction
+  - pdf
+  - camelot
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - extract_tables_from_pdf
+
+# Skill Capabilities
+capabilities:
+  - table_extraction
+  - data_structuring
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Table Extractor Skill

@@ -1,11 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: PDF OCR Extraction
-description: Extract text from scanned PDFs using optical character recognition
-author: claude-office-skills
+description: "Extract text from scanned PDFs using optical character recognition"
 version: "1.0"
-tags: [pdf, ocr, text-extraction, scanning, document]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, file_operations]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: pdf
+tags:
+  - pdf
+  - ocr
+  - scan
+  - text-extraction
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - extract_text_from_pdf
+
+# Skill Capabilities
+capabilities:
+  - ocr_processing
+  - scanned_document_handling
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # PDF OCR Extraction

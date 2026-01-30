@@ -1,11 +1,51 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: Lead Research Assistant
-description: Research company and contact information for sales outreach
-author: claude-office-skills
+description: "Research company and contact information for sales outreach"
 version: "1.0"
-tags: [sales, research, crm, prospecting, b2b]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, web_search]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: sales
+tags:
+  - lead
+  - research
+  - sales
+  - prospecting
+department: Sales
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - xlsx_to_json
+
+# Skill Capabilities
+capabilities:
+  - lead_research
+  - company_analysis
+  - contact_discovery
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Lead Research Assistant

@@ -1,15 +1,43 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: office-mcp
-description: MCP server for Word, Excel, PowerPoint operations via AI
-author: claude-office-skills
+description: "MCP server for Word, Excel, PowerPoint operations via AI"
 version: "1.0"
-tags: ['mcp', 'office', 'word', 'excel', 'powerpoint']
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: Office MCP
-  url: https://github.com/anthropics/skills
-  stars: N/A
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: workflow
+tags:
+  - office
+  - mcp
+  - tools
+  - automation
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# Skill Capabilities
+capabilities:
+  - office_automation
+  - mcp_tools
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Office Mcp Skill

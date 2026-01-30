@@ -1,15 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: office-to-md
-description: Convert Office documents (Word, Excel, PowerPoint, PDF) to Markdown using Microsoft's markitdown
-author: claude-office-skills
+description: ">"
 version: "1.0"
-tags: [markdown, conversion, markitdown, microsoft, office]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: markitdown
-  url: https://github.com/microsoft/markitdown
-  stars: 86k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: conversion
+tags:
+  - office
+  - markdown
+  - conversion
+  - markitdown
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - docx_to_md
+
+# Skill Capabilities
+capabilities:
+  - office_conversion
+  - markdown_export
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Office to Markdown Skill

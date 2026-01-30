@@ -1,11 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: PDF Compress
-description: Reduce PDF file size while maintaining acceptable quality
-author: claude-office-skills
+description: "Reduce PDF file size while maintaining acceptable quality"
 version: "1.0"
-tags: [pdf, compression, optimization, file-size, performance]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, file_operations]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: pdf
+tags:
+  - pdf
+  - compress
+  - optimize
+  - size
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - compress_pdf
+
+# Skill Capabilities
+capabilities:
+  - file_compression
+  - optimization
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # PDF Compress

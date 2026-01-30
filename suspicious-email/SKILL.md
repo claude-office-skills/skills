@@ -1,11 +1,44 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: Suspicious Email Analyzer
-description: Analyze emails for phishing, scam indicators, and security threats
-author: claude-office-skills
+description: "Analyze emails for phishing, scam indicators, and security threats"
 version: "1.0"
-tags: [security, email, phishing, scam, analysis, threat]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: productivity
+tags:
+  - email
+  - security
+  - phishing
+  - analysis
+department: Security
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# Skill Capabilities
+capabilities:
+  - phishing_detection
+  - security_analysis
+  - risk_assessment
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Suspicious Email Analyzer

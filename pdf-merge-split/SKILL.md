@@ -1,11 +1,51 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: PDF Merge & Split
-description: Combine multiple PDFs or split into separate files
-author: claude-office-skills
+description: "Combine multiple PDFs or split into separate files"
 version: "1.0"
-tags: [pdf, merge, split, combine, extract, pages]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, file_operations]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: pdf
+tags:
+  - pdf
+  - merge
+  - split
+  - combine
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - merge_pdfs
+    - split_pdf
+
+# Skill Capabilities
+capabilities:
+  - pdf_merging
+  - pdf_splitting
+  - page_management
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # PDF Merge & Split

@@ -1,15 +1,48 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: pdf-to-docx
-description: Convert PDF files to editable Word documents using pdf2docx
-author: claude-office-skills
+description: "Convert PDF files to editable Word documents using pdf2docx"
 version: "1.0"
-tags: [pdf, word, conversion, pdf2docx, editable]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: pdf2docx
-  url: https://github.com/dothinking/pdf2docx
-  stars: 3.3k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: pdf
+tags:
+  - pdf
+  - docx
+  - conversion
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - pdf_to_docx
+
+# Skill Capabilities
+capabilities:
+  - format_conversion
+  - editable_documents
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # PDF to Word Skill

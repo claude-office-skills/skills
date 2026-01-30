@@ -1,11 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: PDF Watermark
-description: Add watermarks, page numbers, headers, and footers to PDFs
-author: claude-office-skills
+description: "Add watermarks, page numbers, headers, and footers to PDFs"
 version: "1.0"
-tags: [pdf, watermark, page-numbers, headers, footers, branding]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, file_operations]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: pdf
+tags:
+  - pdf
+  - watermark
+  - security
+  - branding
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - add_watermark_to_pdf
+
+# Skill Capabilities
+capabilities:
+  - watermarking
+  - document_protection
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # PDF Watermark & Page Elements

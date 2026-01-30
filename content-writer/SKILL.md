@@ -1,11 +1,51 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: Content Research Writer
-description: Research topics and write content like blog posts, articles, and copy
-author: claude-office-skills
+description: "Research topics and write content like blog posts, articles, and copy"
 version: "1.0"
-tags: [marketing, content, writing, blog, copywriting, seo]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, web_search, text_editor]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: marketing
+tags:
+  - content
+  - writing
+  - blog
+  - article
+department: Marketing
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - md_to_docx
+
+# Skill Capabilities
+capabilities:
+  - content_creation
+  - seo_writing
+  - research
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Content Research Writer

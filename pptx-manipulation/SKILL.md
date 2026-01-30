@@ -1,15 +1,52 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: pptx-manipulation
-description: Create, edit, and manipulate PowerPoint presentations programmatically using python-pptx
-author: claude-office-skills
+description: ">"
 version: "1.0"
-tags: [presentation, powerpoint, pptx, python-pptx, slides]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: python-pptx
-  url: https://github.com/scanny/python-pptx
-  stars: 3.2k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: presentation
+tags:
+  - pptx
+  - powerpoint
+  - manipulation
+  - editing
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_pptx
+    - extract_from_pptx
+    - add_slide
+    - update_slide
+
+# Skill Capabilities
+capabilities:
+  - presentation_creation
+  - slide_editing
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # PPTX Manipulation Skill

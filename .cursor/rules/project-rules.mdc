@@ -1,0 +1,133 @@
+---
+description: Claude Office Skills project coding standards and conventions
+globs: ["**/*.md", "**/*.ts", "**/*.js", "**/*.json", "**/*.py"]
+alwaysApply: true
+---
+
+# Claude Office Skills - Project Rules
+
+## Language Requirements
+
+### Code and Documentation Language: English Only
+
+All project artifacts MUST be written in **English**:
+
+1. **SKILL.md files** - All skill names, descriptions, instructions, and examples must be in English
+2. **Code comments** - All comments in TypeScript, JavaScript, Python must be in English
+3. **Variable/function names** - Use descriptive English names (camelCase for JS/TS, snake_case for Python)
+4. **README and documentation** - All markdown documentation in English
+5. **Git commit messages** - Write commits in English
+6. **JSON/YAML keys** - Use English keys and values
+
+### Example - Correct SKILL.md Header
+
+```yaml
+---
+name: contract-review
+description: "Analyze contracts for risks, check completeness, and provide recommendations."
+category: legal
+tags:
+  - contract
+  - review
+  - risk-analysis
+---
+```
+
+### Example - Incorrect (Do NOT do this)
+
+```yaml
+---
+name: 合同审查  # ❌ Chinese name
+description: "分析合同风险"  # ❌ Chinese description
+---
+```
+
+## Skill Design Standards
+
+### Frontmatter Structure (YAML)
+
+Every SKILL.md must include:
+
+```yaml
+---
+# Basic Information (Required)
+name: skill-name-in-kebab-case
+description: "Clear English description of what this skill does"
+version: "1.0.0"
+author: claude-office-skills
+license: MIT
+
+# Categorization (Required)
+category: legal|hr|finance|sales|marketing|productivity|pdf|document|spreadsheet|presentation|workflow|research|visualization
+tags:
+  - relevant
+  - english
+  - tags
+department: Target Department
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+
+# MCP Tools Integration (if applicable)
+mcp:
+  server: office-mcp
+  tools:
+    - tool_name_1
+    - tool_name_2
+
+# Capabilities
+capabilities:
+  - capability_1
+  - capability_2
+
+# Language Support
+languages:
+  - en
+  - zh
+---
+```
+
+### Content Structure
+
+Skills should follow this structure:
+
+1. **Overview** - What the skill does, capabilities and limitations
+2. **How to Use** - Step-by-step instructions
+3. **Domain Knowledge** - Embedded expertise, patterns, best practices
+4. **Output Format** - Expected output structure
+5. **Examples** - Real-world usage examples
+6. **Tips** - Best practices for better results
+7. **Limitations** - Clear boundaries
+
+## File Naming Conventions
+
+- Skill directories: `kebab-case` (e.g., `contract-review`, `stock-analysis`)
+- TypeScript/JavaScript files: `camelCase.ts` or `kebab-case.ts`
+- Python files: `snake_case.py`
+
+## MCP Server Standards
+
+### Tool Naming
+
+- Use `snake_case` for tool names: `extract_text_from_pdf`, `create_docx`
+- Be descriptive: `analyze_spreadsheet` not `analyze`
+
+### Tool Description
+
+- Write clear English descriptions
+- Include parameter types and examples
+- Document return values
+
+## Git Workflow
+
+- Branch naming: `feature/skill-name` or `fix/issue-description`
+- Commit messages: Use conventional commits in English
+  - `feat: add stock-analysis skill`
+  - `fix: correct calculation in dcf-valuation`
+  - `docs: update README with new skills`

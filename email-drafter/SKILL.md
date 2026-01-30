@@ -1,10 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: email-drafter
-description: Draft professional emails for various business scenarios with appropriate tone and structure
-version: 1.0.0
+description: ">"
+version: "1.0.0"
 author: Claude Office Skills Contributors
 license: MIT
-tags: [communication, email, productivity]
+
+# Categorization
+category: productivity
+tags:
+  - email
+  - writing
+  - communication
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+
+# Skill Capabilities
+capabilities:
+  - email_writing
+  - professional_tone
+  - template_usage
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Email Drafter

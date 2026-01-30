@@ -1,9 +1,91 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: invoice-generator
-description: Create professional invoices with proper formatting for freelancers and small businesses. Supports multiple currencies and tax calculations.
-version: 1.0.0
+description: "Create professional invoices with proper formatting for freelancers and small businesses. Supports multiple currencies and tax calculations."
+version: "1.0.0"
 author: claude-office-skills
 license: MIT
+
+# Categorization
+category: finance
+tags:
+  - invoice
+  - billing
+  - generator
+  - finance
+  - business
+department: Finance
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - fill_docx_template
+    - docx_to_pdf
+  optional_tools:
+    - create_xlsx
+
+# Skill Capabilities
+capabilities:
+  - invoice_creation
+  - tax_calculation
+  - currency_handling
+  - professional_formatting
+
+# Input/Output Specification
+input:
+  required:
+    - type: text
+      name: client_info
+      description: Client name, address, contact
+    - type: text
+      name: line_items
+      description: Products/services with quantities and prices
+  optional:
+    - type: text
+      name: currency
+      description: Currency (USD, EUR, CNY, etc.)
+    - type: text
+      name: tax_rate
+      description: Tax rate percentage
+    - type: text
+      name: payment_terms
+      description: Payment terms and due date
+
+output:
+  primary:
+    type: document
+    formats: [docx, pdf]
+  artifacts:
+    - type: file
+      name: invoice.docx
+      description: Generated invoice document
+
+# Language Support
+languages:
+  - en
+  - zh
+
+# Related Skills
+related_skills:
+  - invoice-template
+  - invoice-organizer
+  - expense-report
 ---
 
 # Invoice Generator Skill

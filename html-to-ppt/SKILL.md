@@ -1,15 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: html-to-ppt
-description: Convert HTML/Markdown to PowerPoint presentations using Marp
-author: claude-office-skills
+description: "Convert HTML/Markdown to PowerPoint presentations using Marp"
 version: "1.0"
-tags: [presentation, marp, markdown, html, slides]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: marp-cli
-  url: https://github.com/marp-team/marp-cli
-  stars: 3.1k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: conversion
+tags:
+  - html
+  - pptx
+  - conversion
+  - slides
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - pptx_to_html
+
+# Skill Capabilities
+capabilities:
+  - html_conversion
+  - slide_generation
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # HTML/Markdown to PowerPoint Skill

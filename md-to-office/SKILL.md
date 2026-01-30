@@ -1,15 +1,50 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: md-to-office
-description: Convert Markdown to Word, PowerPoint, and PDF using Pandoc - the universal document converter
-author: claude-office-skills
+description: ">"
 version: "1.0"
-tags: [markdown, conversion, pandoc, word, pdf, powerpoint]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: pandoc
-  url: https://github.com/jgm/pandoc
-  stars: 42k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: conversion
+tags:
+  - markdown
+  - conversion
+  - office
+  - pandoc
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - md_to_docx
+    - md_to_pptx
+
+# Skill Capabilities
+capabilities:
+  - markdown_conversion
+  - document_generation
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Markdown to Office Skill

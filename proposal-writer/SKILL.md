@@ -1,10 +1,52 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: proposal-writer
-description: Create compelling business proposals that win deals and partnerships
-version: 1.0.0
+description: "Create compelling business proposals that win deals and partnerships"
+version: "1.0.0"
 author: Claude Office Skills Contributors
 license: MIT
-tags: [sales, business, writing]
+
+# Categorization
+category: sales
+tags:
+  - proposal
+  - business
+  - sales
+  - writing
+department: Sales
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - fill_docx_template
+    - create_pptx
+
+# Skill Capabilities
+capabilities:
+  - proposal_writing
+  - persuasive_content
+  - business_case
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Proposal Writer

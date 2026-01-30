@@ -1,15 +1,50 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: form-builder
-description: Build interactive document forms and questionnaires using docassemble
-author: claude-office-skills
+description: "Build interactive document forms and questionnaires using docassemble"
 version: "1.0"
-tags: [forms, questionnaire, docassemble, automation, legal]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: docassemble
-  url: https://github.com/jhpyle/docassemble
-  stars: 919
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: template
+tags:
+  - form
+  - builder
+  - interactive
+  - docassemble
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - fill_docx_template
+
+# Skill Capabilities
+capabilities:
+  - form_creation
+  - interactive_documents
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Form Builder Skill

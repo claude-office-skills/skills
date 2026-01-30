@@ -1,9 +1,52 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: nda-generator
-description: Generate professional Non-Disclosure Agreements for business meetings, partnerships, and employment. Supports mutual and one-way NDAs with customizable terms.
-version: 1.0.0
+description: ">"
+version: "1.0.0"
 author: claude-office-skills
 license: MIT
+
+# Categorization
+category: legal
+tags:
+  - nda
+  - contract
+  - generator
+  - legal
+department: Legal
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - fill_docx_template
+    - docx_to_pdf
+
+# Skill Capabilities
+capabilities:
+  - document_generation
+  - template_filling
+  - legal_drafting
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # NDA Generator Skill

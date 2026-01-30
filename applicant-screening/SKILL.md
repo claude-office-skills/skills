@@ -1,11 +1,52 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: Applicant Screening
-description: Screen job applications against requirements and score candidates
-author: claude-office-skills
+description: "Screen job applications against requirements and score candidates"
 version: "1.0"
-tags: [hr, recruitment, hiring, screening, resume]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, file_operations]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: hr
+tags:
+  - screening
+  - hiring
+  - recruitment
+  - evaluation
+department: HR
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - extract_text_from_pdf
+    - extract_text_from_docx
+    - analyze_document_structure
+
+# Skill Capabilities
+capabilities:
+  - candidate_evaluation
+  - requirement_matching
+  - scoring
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Applicant Screening

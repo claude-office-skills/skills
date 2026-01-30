@@ -1,10 +1,51 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: expense-report
-description: Organize, categorize, and summarize business expenses for reimbursement and tax preparation
-version: 1.0.0
+description: ">"
+version: "1.0.0"
 author: Claude Office Skills Contributors
 license: MIT
-tags: [finance, expenses, accounting]
+
+# Categorization
+category: finance
+tags:
+  - expense
+  - report
+  - reimbursement
+department: Finance
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - read_xlsx
+    - create_xlsx
+    - analyze_spreadsheet
+
+# Skill Capabilities
+capabilities:
+  - expense_tracking
+  - categorization
+  - summarization
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Expense Report

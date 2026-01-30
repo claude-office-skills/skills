@@ -1,15 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: template-engine
-description: Auto-fill document templates with data - mail merge for any format
-author: claude-office-skills
+description: "Auto-fill document templates with data - mail merge for any format"
 version: "1.0"
-tags: ['template', 'mail-merge', 'autofill', 'automation']
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: docxtpl / yumdocs
-  url: https://github.com/elapouya/python-docxtpl
-  stars: 2.1k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: template
+tags:
+  - template
+  - engine
+  - autofill
+  - docxtpl
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - fill_docx_template
+
+# Skill Capabilities
+capabilities:
+  - template_filling
+  - document_automation
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Template Engine Skill

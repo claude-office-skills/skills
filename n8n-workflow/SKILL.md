@@ -1,15 +1,43 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: n8n-workflow
-description: Automate document workflows with n8n - 7800+ workflow templates
-author: claude-office-skills
+description: "Automate document workflows with n8n - 7800+ workflow templates"
 version: "1.0"
-tags: ['workflow', 'automation', 'n8n', 'integration']
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: n8n
-  url: https://github.com/n8n-io/n8n
-  stars: 172k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: workflow
+tags:
+  - n8n
+  - workflow
+  - automation
+  - integration
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# Skill Capabilities
+capabilities:
+  - workflow_automation
+  - integration
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # N8N Workflow Skill

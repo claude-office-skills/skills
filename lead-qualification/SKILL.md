@@ -1,11 +1,52 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: Lead Qualification
-description: Score and qualify leads based on criteria and fit
-author: claude-office-skills
+description: "Score and qualify leads based on criteria and fit"
 version: "1.0"
-tags: [sales, crm, leads, qualification, scoring]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: sales
+tags:
+  - lead
+  - qualification
+  - scoring
+  - sales
+department: Sales
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - read_xlsx
+    - analyze_spreadsheet
+    - create_xlsx
+
+# Skill Capabilities
+capabilities:
+  - lead_scoring
+  - qualification_criteria
+  - prioritization
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Lead Qualification

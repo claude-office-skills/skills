@@ -1,15 +1,50 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: contract-template
-description: Generate smart contract templates using Accord Project - legally enforceable, machine-readable
-author: claude-office-skills
+description: ">"
 version: "1.0"
-tags: [contract, legal, template, accord, smart-contracts]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: accord-project
-  url: https://github.com/accordproject
-  stars: 322
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: template
+tags:
+  - contract
+  - template
+  - legal
+  - accord
+department: Legal
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - fill_docx_template
+
+# Skill Capabilities
+capabilities:
+  - contract_templating
+  - legal_documents
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Contract Template Skill

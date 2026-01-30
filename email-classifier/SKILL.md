@@ -1,11 +1,43 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: Email Classifier
-description: Automatically categorize emails by type, priority, and required action
-author: claude-office-skills
+description: "Automatically categorize emails by type, priority, and required action"
 version: "1.0"
-tags: [email, automation, classification, productivity, inbox]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: productivity
+tags:
+  - email
+  - classification
+  - organization
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# Skill Capabilities
+capabilities:
+  - email_categorization
+  - priority_assignment
+  - labeling
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Email Classifier

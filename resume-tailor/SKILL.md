@@ -1,9 +1,52 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: resume-tailor
-description: Optimize your resume for specific job applications by highlighting relevant experience and matching keywords. Works with any industry and seniority level.
-version: 1.0.0
+description: ">"
+version: "1.0.0"
 author: claude-office-skills
 license: MIT
+
+# Categorization
+category: hr
+tags:
+  - resume
+  - cv
+  - job-application
+  - career
+department: HR/Personal
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - extract_text_from_pdf
+    - extract_text_from_docx
+    - create_docx
+
+# Skill Capabilities
+capabilities:
+  - resume_optimization
+  - keyword_matching
+  - content_tailoring
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Resume Tailor Skill

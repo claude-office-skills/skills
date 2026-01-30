@@ -1,11 +1,51 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: Invoice Organizer
-description: Organize, categorize, and track invoices and receipts
-author: claude-office-skills
+description: "Organize, categorize, and track invoices and receipts"
 version: "1.0"
-tags: [finance, invoices, receipts, organization, accounting, expense]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, file_operations]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: finance
+tags:
+  - invoice
+  - organization
+  - tracking
+department: Finance
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - extract_text_from_pdf
+    - read_xlsx
+    - create_xlsx
+
+# Skill Capabilities
+capabilities:
+  - invoice_management
+  - categorization
+  - data_extraction
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Invoice Organizer

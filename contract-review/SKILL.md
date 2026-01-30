@@ -1,9 +1,92 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: contract-review
-description: Analyze contracts for risks, check completeness, and provide actionable recommendations. Supports employment contracts, NDAs, service agreements, and more. Works with English and Chinese contracts.
-version: 1.0.0
+description: "Analyze contracts for risks, check completeness, and provide actionable recommendations. Supports employment contracts, NDAs, service agreements, and more."
+version: "1.0.0"
 author: claude-office-skills
 license: MIT
+
+# Categorization
+category: legal
+tags:
+  - contract
+  - review
+  - risk-analysis
+  - legal
+  - compliance
+department: Legal
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+# Skills = Solution Guide (WHAT + HOW)
+# MCP = Tool Provider (WITH WHAT)
+mcp:
+  server: office-mcp
+  tools:
+    - extract_text_from_pdf
+    - extract_text_from_docx
+    - analyze_document_structure
+  optional_tools:
+    - create_docx
+    - docx_to_pdf
+
+# Skill Capabilities (for discovery/matching)
+capabilities:
+  - contract_analysis
+  - risk_identification
+  - legal_compliance_check
+  - negotiation_recommendations
+
+# Input/Output Specification
+input:
+  required:
+    - type: file
+      formats: [pdf, docx, txt]
+      description: The contract document to review
+    - type: text
+      name: party_role
+      description: Which party you are (employee, contractor, buyer, etc.)
+  optional:
+    - type: text
+      name: jurisdiction
+      description: Legal jurisdiction (US, EU, China, UK)
+    - type: text
+      name: concerns
+      description: Specific areas of concern
+
+output:
+  primary:
+    type: report
+    format: markdown
+    sections:
+      - risk_summary
+      - detailed_findings
+      - completeness_check
+      - negotiation_priorities
+
+# Language Support
+languages:
+  - en
+  - zh
+
+# Related Skills
+related_skills:
+  - nda-generator
+  - offer-letter
+  - contract-template
 ---
 
 # Contract Review Skill

@@ -1,11 +1,50 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: Brand Guidelines Generator
-description: Create and maintain brand style guides for consistent visual identity
-author: claude-office-skills
+description: "Create and maintain brand style guides for consistent visual identity"
 version: "1.0"
-tags: [marketing, branding, design, style-guide]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [text_editor]
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: marketing
+tags:
+  - brand
+  - guidelines
+  - style
+  - design
+department: Marketing
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - create_pptx
+
+# Skill Capabilities
+capabilities:
+  - brand_documentation
+  - style_guide_creation
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Brand Guidelines Generator

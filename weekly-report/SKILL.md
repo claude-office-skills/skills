@@ -1,10 +1,51 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: weekly-report
-description: Generate consistent, professional weekly status reports for teams and stakeholders
-version: 1.0.0
+description: ">"
+version: "1.0.0"
 author: Claude Office Skills Contributors
 license: MIT
-tags: [productivity, reporting, communication]
+
+# Categorization
+category: productivity
+tags:
+  - report
+  - weekly
+  - status
+  - update
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - fill_docx_template
+
+# Skill Capabilities
+capabilities:
+  - report_generation
+  - status_tracking
+  - progress_summary
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Weekly Report

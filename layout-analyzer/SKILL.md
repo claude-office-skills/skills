@@ -1,15 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: layout-analyzer
-description: Analyze document structure and layout using surya - detect text blocks, tables, and reading order
-author: claude-office-skills
+description: ">"
 version: "1.0"
-tags: [layout, surya, structure, document-analysis, detection]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: surya
-  url: https://github.com/VikParuchuri/surya
-  stars: 19k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: parsing
+tags:
+  - layout
+  - analysis
+  - structure
+  - surya
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - analyze_document_structure
+
+# Skill Capabilities
+capabilities:
+  - layout_detection
+  - structure_analysis
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Layout Analyzer Skill

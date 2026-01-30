@@ -1,15 +1,43 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: mcp-hub
-description: Access 1200+ AI Agent tools via Model Context Protocol (MCP)
-author: claude-office-skills
+description: "Access 1200+ AI Agent tools via Model Context Protocol (MCP)"
 version: "1.0"
-tags: ['mcp', 'ai-agent', 'tools', 'integration']
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: MCP Servers
-  url: https://github.com/modelcontextprotocol/servers
-  stars: 40k+
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: workflow
+tags:
+  - mcp
+  - hub
+  - tools
+  - integration
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# Skill Capabilities
+capabilities:
+  - tool_discovery
+  - mcp_integration
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Mcp Hub Skill

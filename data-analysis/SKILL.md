@@ -1,11 +1,90 @@
 ---
-name: Data Analysis Assistant
-description: Analyze spreadsheet data, generate insights, and create visualizations
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
+name: data-analysis
+description: "Analyze spreadsheet data, generate insights, create visualizations, and build reports from Excel/CSV data."
+version: "1.0.0"
 author: claude-office-skills
-version: "1.0"
-tags: [spreadsheet, excel, data, analytics, visualization, charts]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, text_editor]
+license: MIT
+
+# Categorization
+category: finance
+tags:
+  - data
+  - analysis
+  - spreadsheet
+  - excel
+  - visualization
+  - insights
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - read_xlsx
+    - analyze_spreadsheet
+    - create_chart
+    - pivot_table
+  optional_tools:
+    - create_xlsx
+    - xlsx_to_json
+
+# Skill Capabilities
+capabilities:
+  - data_analysis
+  - statistical_analysis
+  - visualization
+  - trend_detection
+  - reporting
+
+# Input/Output Specification
+input:
+  required:
+    - type: file
+      formats: [xlsx, csv, xls]
+      description: The spreadsheet data to analyze
+  optional:
+    - type: text
+      name: analysis_goal
+      description: Specific questions or analysis goals
+    - type: text
+      name: output_format
+      description: Preferred output format (report, chart, summary)
+
+output:
+  primary:
+    type: report
+    format: markdown
+    sections:
+      - data_overview
+      - key_insights
+      - visualizations
+      - recommendations
+
+# Language Support
+languages:
+  - en
+  - zh
+
+# Related Skills
+related_skills:
+  - excel-automation
+  - report-generator
+  - xlsx-manipulation
 ---
 
 # Data Analysis Assistant

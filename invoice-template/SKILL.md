@@ -1,15 +1,50 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: invoice-template
-description: Generate professional PDF invoices from templates
-author: claude-office-skills
+description: "Generate professional PDF invoices from templates"
 version: "1.0"
-tags: ['invoice', 'pdf', 'template', 'billing']
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: easy-invoice-pdf
-  url: https://github.com/nickmitchko/easy-invoice-pdf
-  stars: 476
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: finance
+tags:
+  - invoice
+  - template
+  - billing
+department: Finance
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - fill_docx_template
+    - docx_to_pdf
+
+# Skill Capabilities
+capabilities:
+  - template_creation
+  - invoice_formatting
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Invoice Template Skill

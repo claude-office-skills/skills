@@ -1,15 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: batch-processor
-description: Process multiple documents in bulk with parallel execution
-author: claude-office-skills
+description: "Process multiple documents in bulk with parallel execution"
 version: "1.0"
-tags: ['batch', 'bulk', 'parallel', 'automation']
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: Custom
-  url: https://github.com/claude-office-skills/skills
-  stars: N/A
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: workflow
+tags:
+  - batch
+  - processor
+  - bulk
+  - automation
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - batch_convert
+
+# Skill Capabilities
+capabilities:
+  - batch_processing
+  - automation
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Batch Processor Skill

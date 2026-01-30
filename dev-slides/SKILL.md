@@ -1,15 +1,50 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: dev-slides
-description: Create developer-friendly presentations using Slidev - Vue-powered slides with code execution
-author: claude-office-skills
+description: ">"
 version: "1.0"
-tags: [presentation, slidev, vue, developer, code]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: slidev
-  url: https://github.com/slidevjs/slidev
-  stars: 44k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: presentation
+tags:
+  - developer
+  - slides
+  - slidev
+  - vue
+department: Dev
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_pptx
+    - md_to_pptx
+
+# Skill Capabilities
+capabilities:
+  - developer_presentations
+  - code_slides
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Developer Slides Skill

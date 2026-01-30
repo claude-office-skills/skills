@@ -1,10 +1,50 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: cover-letter
-description: Create compelling, personalized cover letters that help you stand out in job applications
-version: 1.0.0
+description: ">"
+version: "1.0.0"
 author: Claude Office Skills Contributors
 license: MIT
-tags: [careers, job-search, writing]
+
+# Categorization
+category: hr
+tags:
+  - cover-letter
+  - job-application
+  - writing
+department: HR/Personal
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - create_docx
+    - docx_to_pdf
+
+# Skill Capabilities
+capabilities:
+  - letter_writing
+  - personalization
+  - professional_tone
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # Cover Letter

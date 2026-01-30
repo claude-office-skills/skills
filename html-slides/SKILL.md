@@ -1,15 +1,49 @@
 ---
+# ═══════════════════════════════════════════════════════════════════════════════
+# CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Basic Information
 name: html-slides
-description: Create interactive HTML presentations using reveal.js - the web's most popular presentation framework
-author: claude-office-skills
+description: ">"
 version: "1.0"
-tags: [presentation, reveal.js, html, slides, interactive]
-models: [claude-sonnet-4, claude-opus-4]
-tools: [computer, code_execution, file_operations]
-library:
-  name: reveal.js
-  url: https://github.com/hakimel/reveal.js
-  stars: 70.5k
+author: claude-office-skills
+license: MIT
+
+# Categorization
+category: presentation
+tags:
+  - html
+  - slides
+  - revealjs
+  - web
+department: All
+
+# AI Model Compatibility
+models:
+  recommended:
+    - claude-sonnet-4
+    - claude-opus-4
+  compatible:
+    - claude-3-5-sonnet
+    - gpt-4
+    - gpt-4o
+
+# MCP Tools Integration
+mcp:
+  server: office-mcp
+  tools:
+    - pptx_to_html
+
+# Skill Capabilities
+capabilities:
+  - web_presentation
+  - html_slides
+
+# Language Support
+languages:
+  - en
+  - zh
 ---
 
 # HTML Slides Skill
