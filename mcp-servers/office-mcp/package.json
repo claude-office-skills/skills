@@ -43,6 +43,7 @@
     "pdf-parse": "^1.1.1",
     "pizzip": "^3.2.0",
     "pptx-parser": "^1.0.0",
+    "pptxgenjs": "^4.0.1",
     "turndown": "^7.1.2",
     "xlsx": "^0.18.5"
   },
