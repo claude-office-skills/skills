@@ -43,6 +43,20 @@ mcp:
     - create_docx
     - docx_to_pdf
 
+# Knowledge Base Integration
+# Knowledge = Domain expertise as structured data
+knowledge:
+  base:
+    - mcp-servers/office-mcp/knowledge/base/risk_patterns.json
+    - mcp-servers/office-mcp/knowledge/base/completeness.json
+  jurisdictions:
+    - mcp-servers/office-mcp/knowledge/base/jurisdictions/us.json
+    - mcp-servers/office-mcp/knowledge/base/jurisdictions/china.json
+    - mcp-servers/office-mcp/knowledge/base/jurisdictions/eu.json
+  custom:
+    # Users can add their own knowledge files here
+    # Example: ./knowledge/my_company_rules.json
+
 # Skill Capabilities (for discovery/matching)
 capabilities:
   - contract_analysis

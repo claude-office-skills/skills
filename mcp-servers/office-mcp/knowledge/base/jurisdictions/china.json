@@ -1,0 +1,172 @@
+{
+  "version": "1.0",
+  "jurisdiction": "china",
+  "name": "People's Republic of China",
+  "name_zh": "中华人民共和国",
+  "description": "Chinese employment and contract law",
+
+  "employment_law": {
+    "labor_contract_law": {
+      "written_contract": {
+        "required": true,
+        "deadline": "Within 30 days of employment start",
+        "penalty": "Double wages for each month without contract (up to 11 months)"
+      },
+      "contract_types": [
+        {
+          "type": "fixed_term",
+          "name_zh": "固定期限合同",
+          "description": "Contract with specific end date"
+        },
+        {
+          "type": "open_ended",
+          "name_zh": "无固定期限合同",
+          "description": "No specified end date",
+          "automatic_conversion": "After 2 consecutive fixed-term contracts or 10 years continuous service"
+        },
+        {
+          "type": "task_based",
+          "name_zh": "以完成一定工作任务为期限的合同",
+          "description": "Ends upon task completion"
+        }
+      ]
+    },
+    "probation_period": {
+      "max_duration": {
+        "contract_3mo_to_1yr": "1 month",
+        "contract_1yr_to_3yr": "2 months",
+        "contract_3yr_plus": "6 months"
+      },
+      "salary": "Not less than 80% of agreed salary or local minimum wage",
+      "note": "Only one probation period per employer"
+    },
+    "working_hours": {
+      "standard": "8 hours/day, 40 hours/week",
+      "overtime_limit": "1 hour/day normally, 3 hours/day in special circumstances",
+      "monthly_limit": "36 hours/month"
+    },
+    "overtime_pay": {
+      "weekday": "150% of normal wage",
+      "weekend": "200% of normal wage (or compensatory time off)",
+      "holiday": "300% of normal wage"
+    }
+  },
+
+  "termination_rules": {
+    "employer_termination": {
+      "immediate_dismissal": [
+        "During probation - fails to meet hiring conditions",
+        "Serious violation of company rules",
+        "Serious dereliction of duty causing significant damage",
+        "Conflict of interest with another employer",
+        "Contract invalidated due to fraud/coercion",
+        "Criminal liability"
+      ],
+      "with_30_days_notice": [
+        "Employee unable to perform after medical treatment",
+        "Employee incompetent after training/reassignment",
+        "Material change in circumstances making contract unperformable"
+      ],
+      "mass_layoff": {
+        "threshold": "20+ employees or 10%+ of workforce",
+        "requirements": [
+          "30 days notice to union/employees",
+          "Report to labor authority",
+          "Priority re-hire within 6 months"
+        ]
+      }
+    },
+    "employee_termination": {
+      "with_30_days_notice": "At any time",
+      "during_probation": "3 days notice",
+      "immediate_resignation": [
+        "Employer fails to provide working conditions or pay",
+        "Employer fails to pay social insurance",
+        "Rules violate laws/regulations harming employee",
+        "Employer uses force/threats",
+        "Employer forces dangerous work"
+      ]
+    }
+  },
+
+  "severance_pay": {
+    "calculation": "1 month salary per year of service (pro-rated)",
+    "cap": "3x local average salary × 12 years",
+    "when_required": [
+      "Mutual termination",
+      "Employer termination with notice",
+      "Contract expiration (if employer chooses not to renew)",
+      "Mass layoff"
+    ]
+  },
+
+  "non_compete": {
+    "max_duration": "2 years after termination",
+    "compensation_required": true,
+    "compensation_amount": "Monthly payment during restriction period",
+    "minimum_compensation": "30-50% of pre-termination salary (varies by region)",
+    "scope_limits": "Must be related to employer's business and position held"
+  },
+
+  "social_insurance": {
+    "mandatory_contributions": [
+      {
+        "type": "pension",
+        "name_zh": "养老保险",
+        "employer_rate": "~16%",
+        "employee_rate": "8%"
+      },
+      {
+        "type": "medical",
+        "name_zh": "医疗保险",
+        "employer_rate": "~8%",
+        "employee_rate": "2%"
+      },
+      {
+        "type": "unemployment",
+        "name_zh": "失业保险",
+        "employer_rate": "~0.5%",
+        "employee_rate": "0.5%"
+      },
+      {
+        "type": "work_injury",
+        "name_zh": "工伤保险",
+        "employer_rate": "~0.2-1.9%",
+        "employee_rate": "0%"
+      },
+      {
+        "type": "maternity",
+        "name_zh": "生育保险",
+        "employer_rate": "~0.5%",
+        "employee_rate": "0%"
+      }
+    ],
+    "housing_fund": {
+      "name_zh": "住房公积金",
+      "rate": "5-12% (employer and employee each)"
+    }
+  },
+
+  "key_laws": [
+    {
+      "code": "劳动合同法",
+      "name": "Labor Contract Law",
+      "description": "Primary employment law"
+    },
+    {
+      "code": "劳动法",
+      "name": "Labor Law",
+      "description": "General labor standards"
+    },
+    {
+      "code": "社会保险法",
+      "name": "Social Insurance Law",
+      "description": "Mandatory social insurance"
+    },
+    {
+      "code": "合同法/民法典",
+      "name": "Civil Code (Contract Section)",
+      "description": "General contract law"
+    }
+  ]
+}

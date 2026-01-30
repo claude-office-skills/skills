@@ -1,0 +1,241 @@
+{
+  "version": "1.0",
+  "description": "Contract completeness checklist - essential elements to verify",
+  "author": "claude-office-skills",
+
+  "essential_elements": [
+    {
+      "id": "parties",
+      "name": "Parties Identification",
+      "name_zh": "当事人信息",
+      "category": "basic",
+      "required": true,
+      "description": "Full legal names and addresses of all parties",
+      "check_for": ["Party A", "Party B", "full name", "legal entity", "address", "registration number"],
+      "check_for_zh": ["甲方", "乙方", "全称", "法人", "地址", "注册号"]
+    },
+    {
+      "id": "effective_date",
+      "name": "Effective Date",
+      "name_zh": "生效日期",
+      "category": "basic",
+      "required": true,
+      "description": "When the contract becomes effective",
+      "check_for": ["effective date", "commencement date", "start date", "as of"],
+      "check_for_zh": ["生效日期", "起始日期", "自...起"]
+    },
+    {
+      "id": "term_duration",
+      "name": "Term/Duration",
+      "name_zh": "期限",
+      "category": "basic",
+      "required": true,
+      "description": "How long the contract lasts",
+      "check_for": ["term", "duration", "period", "expiration", "until"],
+      "check_for_zh": ["期限", "有效期", "至...止"]
+    },
+    {
+      "id": "scope",
+      "name": "Scope of Work/Services",
+      "name_zh": "工作范围",
+      "category": "basic",
+      "required": true,
+      "description": "What is being provided or delivered",
+      "check_for": ["scope", "services", "deliverables", "work product", "obligations"],
+      "check_for_zh": ["范围", "服务内容", "交付物", "工作成果", "义务"]
+    },
+    {
+      "id": "compensation",
+      "name": "Compensation/Payment",
+      "name_zh": "报酬/付款",
+      "category": "basic",
+      "required": true,
+      "description": "Payment amount, schedule, and method",
+      "check_for": ["compensation", "payment", "fee", "salary", "price", "invoice"],
+      "check_for_zh": ["报酬", "付款", "费用", "薪资", "价格", "发票"]
+    },
+    {
+      "id": "termination",
+      "name": "Termination Provisions",
+      "name_zh": "终止条款",
+      "category": "basic",
+      "required": true,
+      "description": "How and when the contract can be ended",
+      "check_for": ["termination", "terminate", "cancellation", "notice period"],
+      "check_for_zh": ["终止", "解除", "取消", "通知期"]
+    }
+  ],
+
+  "important_clauses": [
+    {
+      "id": "confidentiality",
+      "name": "Confidentiality",
+      "name_zh": "保密条款",
+      "category": "protection",
+      "required": false,
+      "importance": "high",
+      "description": "How sensitive information is protected",
+      "check_for": ["confidential", "proprietary", "non-disclosure", "NDA", "trade secret"],
+      "check_for_zh": ["保密", "专有", "不披露", "商业秘密"]
+    },
+    {
+      "id": "intellectual_property",
+      "name": "Intellectual Property",
+      "name_zh": "知识产权",
+      "category": "protection",
+      "required": false,
+      "importance": "high",
+      "description": "Who owns created work",
+      "check_for": ["intellectual property", "IP", "copyright", "patent", "trademark", "work for hire"],
+      "check_for_zh": ["知识产权", "版权", "专利", "商标", "职务作品"]
+    },
+    {
+      "id": "liability_limits",
+      "name": "Liability Limitations",
+      "name_zh": "责任限制",
+      "category": "protection",
+      "required": false,
+      "importance": "high",
+      "description": "Caps on responsibility",
+      "check_for": ["liability", "limitation", "cap", "maximum", "exclude"],
+      "check_for_zh": ["责任", "限制", "上限", "最高", "排除"]
+    },
+    {
+      "id": "indemnification",
+      "name": "Indemnification",
+      "name_zh": "赔偿条款",
+      "category": "protection",
+      "required": false,
+      "importance": "high",
+      "description": "Who covers what damages",
+      "check_for": ["indemnify", "hold harmless", "defend", "reimburse"],
+      "check_for_zh": ["赔偿", "免责", "补偿"]
+    },
+    {
+      "id": "governing_law",
+      "name": "Governing Law",
+      "name_zh": "适用法律",
+      "category": "dispute",
+      "required": false,
+      "importance": "medium",
+      "description": "Which jurisdiction's laws apply",
+      "check_for": ["governing law", "applicable law", "jurisdiction", "laws of"],
+      "check_for_zh": ["适用法律", "管辖", "法律管辖"]
+    },
+    {
+      "id": "dispute_resolution",
+      "name": "Dispute Resolution",
+      "name_zh": "争议解决",
+      "category": "dispute",
+      "required": false,
+      "importance": "medium",
+      "description": "How disagreements are handled",
+      "check_for": ["dispute", "arbitration", "mediation", "litigation", "court"],
+      "check_for_zh": ["争议", "仲裁", "调解", "诉讼", "法院"]
+    },
+    {
+      "id": "force_majeure",
+      "name": "Force Majeure",
+      "name_zh": "不可抗力",
+      "category": "protection",
+      "required": false,
+      "importance": "medium",
+      "description": "Provisions for unforeseeable events",
+      "check_for": ["force majeure", "act of god", "unforeseeable", "beyond control"],
+      "check_for_zh": ["不可抗力", "天灾", "不可预见"]
+    },
+    {
+      "id": "assignment",
+      "name": "Assignment",
+      "name_zh": "转让条款",
+      "category": "rights",
+      "required": false,
+      "importance": "low",
+      "description": "Whether rights can be transferred",
+      "check_for": ["assignment", "transfer", "assign rights", "successor"],
+      "check_for_zh": ["转让", "转移", "继承人"]
+    },
+    {
+      "id": "amendments",
+      "name": "Amendment Provisions",
+      "name_zh": "修改条款",
+      "category": "procedural",
+      "required": false,
+      "importance": "low",
+      "description": "How the contract can be modified",
+      "check_for": ["amendment", "modification", "change", "written consent"],
+      "check_for_zh": ["修改", "变更", "书面同意"]
+    },
+    {
+      "id": "entire_agreement",
+      "name": "Entire Agreement",
+      "name_zh": "完整协议",
+      "category": "procedural",
+      "required": false,
+      "importance": "low",
+      "description": "This contract supersedes all prior agreements",
+      "check_for": ["entire agreement", "whole agreement", "supersedes", "prior agreements"],
+      "check_for_zh": ["完整协议", "全部协议", "取代", "先前协议"]
+    }
+  ],
+
+  "execution_elements": [
+    {
+      "id": "signature_blocks",
+      "name": "Signature Blocks",
+      "name_zh": "签名栏",
+      "required": true,
+      "description": "Space for all parties to sign",
+      "check_for": ["signature", "signed by", "authorized representative"],
+      "check_for_zh": ["签名", "签章", "授权代表"]
+    },
+    {
+      "id": "date_lines",
+      "name": "Date Lines",
+      "name_zh": "日期栏",
+      "required": true,
+      "description": "When signatures were added",
+      "check_for": ["date", "dated", "day of"],
+      "check_for_zh": ["日期", "签署于"]
+    },
+    {
+      "id": "witness_notary",
+      "name": "Witness/Notary",
+      "name_zh": "见证人/公证",
+      "required": false,
+      "description": "If required by type or jurisdiction",
+      "check_for": ["witness", "notary", "notarized", "attestation"],
+      "check_for_zh": ["见证人", "公证", "证明"]
+    }
+  ],
+
+  "contract_type_specific": {
+    "employment": [
+      "job_title",
+      "work_location",
+      "work_hours",
+      "benefits",
+      "probation_period",
+      "non_compete",
+      "non_solicitation"
+    ],
+    "service": [
+      "service_level",
+      "acceptance_criteria",
+      "warranty",
+      "support_terms"
+    ],
+    "nda": [
+      "definition_of_confidential",
+      "permitted_disclosure",
+      "return_of_materials",
+      "survival_period"
+    ],
+    "sale": [
+      "product_description",
+      "delivery_terms",
+      "warranty",
+      "returns_policy"
+    ]
+  }
+}

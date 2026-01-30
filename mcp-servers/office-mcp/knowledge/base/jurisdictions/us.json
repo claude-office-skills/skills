@@ -1,0 +1,106 @@
+{
+  "version": "1.0",
+  "jurisdiction": "us",
+  "name": "United States (Federal)",
+  "name_zh": "美国（联邦）",
+  "description": "Federal employment and contract law baseline",
+
+  "employment_law": {
+    "at_will_doctrine": {
+      "description": "Employment can be terminated by either party at any time, for any reason (with exceptions)",
+      "exceptions": [
+        "Discrimination (Title VII, ADA, ADEA)",
+        "Retaliation for protected activities",
+        "Violation of public policy",
+        "Implied contract exceptions"
+      ],
+      "note": "Montana is the only state without at-will doctrine"
+    },
+    "classification": {
+      "exempt": {
+        "salary_threshold": "$684/week ($35,568/year)",
+        "duties_test": "Executive, Administrative, Professional, Computer, Outside Sales",
+        "overtime": "Not entitled to overtime"
+      },
+      "non_exempt": {
+        "overtime": "1.5x regular rate after 40 hours/week",
+        "minimum_wage": "$7.25/hour (federal minimum)"
+      }
+    },
+    "protected_classes": [
+      "Race",
+      "Color",
+      "Religion",
+      "Sex (including pregnancy, sexual orientation, gender identity)",
+      "National origin",
+      "Age (40+)",
+      "Disability",
+      "Genetic information"
+    ]
+  },
+
+  "contract_requirements": {
+    "statute_of_frauds": {
+      "written_required_for": [
+        "Contracts that cannot be performed within one year",
+        "Real estate transactions",
+        "Sale of goods over $500 (UCC)",
+        "Guarantees/suretyship"
+      ]
+    },
+    "consideration": "Required for enforceable contracts",
+    "capacity": "Parties must be 18+ and mentally competent"
+  },
+
+  "key_federal_laws": [
+    {
+      "code": "Title VII",
+      "name": "Civil Rights Act of 1964",
+      "description": "Prohibits employment discrimination"
+    },
+    {
+      "code": "FLSA",
+      "name": "Fair Labor Standards Act",
+      "description": "Minimum wage, overtime, child labor"
+    },
+    {
+      "code": "ADA",
+      "name": "Americans with Disabilities Act",
+      "description": "Disability discrimination and accommodations"
+    },
+    {
+      "code": "ADEA",
+      "name": "Age Discrimination in Employment Act",
+      "description": "Protects workers 40 and older"
+    },
+    {
+      "code": "FMLA",
+      "name": "Family and Medical Leave Act",
+      "description": "12 weeks unpaid leave for qualifying reasons"
+    },
+    {
+      "code": "NLRA",
+      "name": "National Labor Relations Act",
+      "description": "Right to organize and collective bargaining"
+    },
+    {
+      "code": "ERISA",
+      "name": "Employee Retirement Income Security Act",
+      "description": "Pension and benefit plan requirements"
+    }
+  ],
+
+  "non_compete_rules": {
+    "general_rule": "Enforceable if reasonable in scope, duration, and geography",
+    "reasonableness_factors": [
+      "Legitimate business interest to protect",
+      "Time limitation (typically 1-2 years)",
+      "Geographic scope",
+      "Industry/activity restrictions",
+      "Consideration provided"
+    ],
+    "note": "FTC proposed ban on non-competes (pending as of 2024)"
+  },
+
+  "state_variations_note": "Individual states may have stricter requirements. Check state-specific knowledge files."
+}

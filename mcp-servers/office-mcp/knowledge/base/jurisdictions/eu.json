@@ -1,0 +1,147 @@
+{
+  "version": "1.0",
+  "jurisdiction": "eu",
+  "name": "European Union",
+  "name_zh": "欧盟",
+  "description": "EU-wide employment and contract directives (member states may have stricter rules)",
+
+  "employment_law": {
+    "working_time_directive": {
+      "max_weekly_hours": 48,
+      "calculation": "Average over reference period (up to 4 months)",
+      "rest_periods": {
+        "daily": "11 consecutive hours",
+        "weekly": "24 hours uninterrupted (plus 11 hours daily rest)"
+      },
+      "breaks": "If work day exceeds 6 hours",
+      "annual_leave": "4 weeks minimum paid leave",
+      "night_work": "8 hours max in 24-hour period (average)"
+    },
+    "written_statement": {
+      "required": true,
+      "deadline": "Within 7 days (essential terms) / 1 month (other terms)",
+      "must_include": [
+        "Parties' identities",
+        "Place of work",
+        "Job title/description",
+        "Start date",
+        "Duration (if temporary)",
+        "Paid leave entitlement",
+        "Notice periods",
+        "Remuneration details",
+        "Working hours"
+      ]
+    },
+    "fixed_term_contracts": {
+      "successive_contracts": "Must be justified by objective reasons",
+      "max_duration": "Varies by member state",
+      "equal_treatment": "Same conditions as permanent employees"
+    }
+  },
+
+  "gdpr_requirements": {
+    "applies_to": "Processing of personal data",
+    "key_principles": [
+      "Lawfulness, fairness, transparency",
+      "Purpose limitation",
+      "Data minimization",
+      "Accuracy",
+      "Storage limitation",
+      "Integrity and confidentiality",
+      "Accountability"
+    ],
+    "data_subject_rights": [
+      "Right to be informed",
+      "Right of access",
+      "Right to rectification",
+      "Right to erasure",
+      "Right to restrict processing",
+      "Right to data portability",
+      "Right to object",
+      "Rights related to automated decision-making"
+    ],
+    "contract_requirements": [
+      "Data Processing Agreement (DPA) for processors",
+      "Privacy notice to data subjects",
+      "Lawful basis for processing",
+      "Cross-border transfer safeguards (SCCs, adequacy decisions)"
+    ],
+    "penalties": "Up to €20 million or 4% of global annual turnover"
+  },
+
+  "termination_rules": {
+    "notice_periods": {
+      "general": "Determined by member state law and length of service",
+      "typical_range": "1 week to 3 months"
+    },
+    "unfair_dismissal": {
+      "protection": "Most member states require fair reason for dismissal",
+      "remedies": "Reinstatement and/or compensation"
+    },
+    "collective_redundancies": {
+      "threshold": "Varies by member state (typically 10-20 employees)",
+      "requirements": [
+        "Consultation with employee representatives",
+        "Notification to public authority",
+        "Information on reasons, numbers, categories affected"
+      ]
+    }
+  },
+
+  "non_compete": {
+    "general_rule": "Allowed but must be reasonable",
+    "common_requirements": [
+      "Limited duration (typically 6-24 months)",
+      "Limited geographic scope",
+      "Compensation often required",
+      "Written form"
+    ],
+    "varies_by_country": true,
+    "note": "Germany, France, Belgium require compensation; UK traditionally did not"
+  },
+
+  "posted_workers": {
+    "directive": "Posted Workers Directive",
+    "requirements": [
+      "Equal treatment on core terms",
+      "Minimum rates of pay",
+      "Maximum work periods",
+      "Health and safety requirements"
+    ]
+  },
+
+  "key_directives": [
+    {
+      "code": "2019/1152",
+      "name": "Transparent and Predictable Working Conditions Directive",
+      "description": "Information rights for workers"
+    },
+    {
+      "code": "2003/88/EC",
+      "name": "Working Time Directive",
+      "description": "Maximum working hours, rest periods"
+    },
+    {
+      "code": "2016/679",
+      "name": "General Data Protection Regulation (GDPR)",
+      "description": "Data protection and privacy"
+    },
+    {
+      "code": "98/59/EC",
+      "name": "Collective Redundancies Directive",
+      "description": "Mass layoff procedures"
+    },
+    {
+      "code": "2001/23/EC",
+      "name": "Transfer of Undertakings Directive (TUPE)",
+      "description": "Employee rights in business transfers"
+    },
+    {
+      "code": "2000/78/EC",
+      "name": "Employment Equality Framework Directive",
+      "description": "Non-discrimination in employment"
+    }
+  ],
+
+  "member_state_note": "Individual member states may have stricter or additional requirements. Always check local law."
+}
