@@ -61,6 +61,24 @@ knowledge:
 
 ---
 
+## 🤖 NEW: Pre-configured Agents
+
+**Digital employees** ready to deploy - combine personality, skills, and knowledge into complete AI personas.
+
+| Agent | Role | Skills |
+|-------|------|--------|
+| [⚖️ Legal Specialist](./agents/legal-specialist/) | Contract Review & Legal Ops | contract-review, nda-generator |
+| [📊 Data Analyst](./agents/data-analyst/) | Excel Analysis & Reporting | data-analysis, dcf-valuation |
+| [📋 Admin Assistant](./agents/admin-assistant/) | Email & Calendar Management | email-drafter, meeting-notes |
+| [🔍 Research Analyst](./agents/research-analyst/) | Deep Research & Company Analysis | deep-research, company-research |
+| [✍️ Content Creator](./agents/content-creator/) | Writing & Marketing Content | content-writer, seo-optimizer |
+
+**Deploy to any platform**: WhatsApp, Telegram, Slack, Discord, Web
+
+[📖 Agents Documentation](./agents/) | [🛠️ Create Custom Agent](./agents/_template/)
+
+---
+
 ## Contents
 
 - [What Are Claude Skills?](#what-are-claude-skills)
