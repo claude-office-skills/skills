@@ -61,21 +61,25 @@ knowledge:
 
 ---
 
-## 🤖 NEW: Pre-configured Agents
+## 🤖 NEW: Pre-built Agents
 
-**Digital employees** ready to deploy - combine personality, skills, and knowledge into complete AI personas.
+**5 ready-to-deploy AI personas** with curated skills, knowledge, and personality.
 
-| Agent | Role | Skills |
-|-------|------|--------|
-| [⚖️ Legal Specialist](./agents/legal-specialist/) | Contract Review & Legal Ops | contract-review, nda-generator |
-| [📊 Data Analyst](./agents/data-analyst/) | Excel Analysis & Reporting | data-analysis, dcf-valuation |
-| [📋 Admin Assistant](./agents/admin-assistant/) | Email & Calendar Management | email-drafter, meeting-notes |
-| [🔍 Research Analyst](./agents/research-analyst/) | Deep Research & Company Analysis | deep-research, company-research |
-| [✍️ Content Creator](./agents/content-creator/) | Writing & Marketing Content | content-writer, seo-optimizer |
+| Agent | Role | Key Skills | Deploy To |
+|-------|------|------------|-----------|
+| ⚖️ [Legal Specialist](./agents/legal-specialist/) | Contract Review | contract-review, nda-generator | All platforms |
+| 📊 [Data Analyst](./agents/data-analyst/) | Excel & Finance | data-analysis, dcf-valuation | All platforms |
+| 📋 [Admin Assistant](./agents/admin-assistant/) | Email & Calendar | email-drafter, meeting-notes | All platforms |
+| 🔬 [Research Analyst](./agents/research-analyst/) | Deep Research | deep-research, company-research | All platforms |
+| ✍️ [Content Creator](./agents/content-creator/) | Writing & Marketing | content-writer, seo-optimizer | All platforms |
 
-**Deploy to any platform**: WhatsApp, Telegram, Slack, Discord, Web
+**Quick Deploy:**
+```bash
+# Install agent to Moltbot
+curl -fsSL https://molt.bot/install | bash -s -- --agent legal-specialist
+```
 
-[📖 Agents Documentation](./agents/) | [🛠️ Create Custom Agent](./agents/_template/)
+[📖 All Agents](./agents/) | [🛠️ Create Custom Agent](./agents/_template/)
 
 ---
 
