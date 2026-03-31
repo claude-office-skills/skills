@@ -4,8 +4,8 @@
 # ═══════════════════════════════════════════════════════════════════════════════
 
 # Basic Information
-name: Job Description Generator
-description: ">"
+name: job-description
+description: "Generate professional, inclusive job descriptions with structured sections for responsibilities, requirements, benefits, and inclusive language guidelines. Use when creating new job postings, updating existing role descriptions, or reviewing job listings for bias and completeness."
 version: "1.0"
 author: claude-office-skills
 license: MIT

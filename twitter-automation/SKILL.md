@@ -1,6 +1,6 @@
 ---
-name: Twitter/X Automation
-description: Automate Twitter/X social media workflows including posting, engagement, analytics, and audience growth
+name: twitter-automation
+description: "Automate Twitter/X social media workflows including content scheduling, thread creation, engagement rules, and audience growth strategies. Use when planning tweet schedules, building content calendars, automating engagement, or tracking social media analytics."
 version: 1.0.0
 author: Claude Office Skills
 category: social-media

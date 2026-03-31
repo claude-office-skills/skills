@@ -1,6 +1,6 @@
 ---
-name: Mailchimp Automation
-description: Automate Mailchimp email marketing campaigns, audience management, automations, and analytics
+name: mailchimp-automation
+description: "Automate Mailchimp email marketing workflows including campaign creation, audience segmentation, welcome series, abandoned cart recovery, and A/B testing. Use when setting up email campaigns, building automation sequences, managing subscriber segments, or analyzing campaign performance."
 version: 1.0.0
 author: Claude Office Skills
 category: marketing
