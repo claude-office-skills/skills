@@ -1,6 +1,6 @@
 ---
-name: Stripe Payments
-description: Automate Stripe payment processing, subscription management, invoicing, and financial reporting
+name: stripe-payments
+description: "Automate Stripe payment processing including checkout integration, subscription lifecycle management, dunning sequences, and revenue analytics. Use when implementing payment flows, managing subscriptions, configuring invoicing, or building revenue dashboards."
 version: 1.0.0
 author: Claude Office Skills
 category: payments

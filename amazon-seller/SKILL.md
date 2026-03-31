@@ -1,6 +1,6 @@
 ---
-name: Amazon Seller
-description: Automate Amazon seller operations including inventory, orders, pricing, and advertising management
+name: amazon-seller
+description: "Automate Amazon seller operations including FBA inventory planning, listing optimization, PPC campaign management, and profit analysis. Use when managing Amazon product listings, monitoring inventory levels, optimizing advertising spend, or generating seller performance reports."
 version: 1.0.0
 author: Claude Office Skills
 category: e-commerce
