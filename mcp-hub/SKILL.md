@@ -118,6 +118,10 @@ Browse available servers:
 ```
 
 
+## Credentials and agent workflows
+
+MCP servers often need API keys or OAuth-backed tokens. If you want those secrets stored locally (encrypted), refreshed automatically, and injected only when a command runs—instead of pasting keys into the agent or duplicating `.env` files—you can use [**authsome**](https://github.com/manojbajaj95/authsome) with the [**Authsome skill**](https://github.com/manojbajaj95/authsome/blob/main/skills/authsome/SKILL.md) bundled in that repository. The CLI supports OAuth2 flows, API keys, and `authsome run` to wrap tools with the right environment.
+
 ## Best Practices
 
 1. **Only enable MCP servers you need (security)**

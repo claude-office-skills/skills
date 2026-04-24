@@ -204,6 +204,10 @@ Or install a single skill via chat:
 Install this skill: https://raw.githubusercontent.com/claude-office-skills/skills/main/contract-review/SKILL.md
 ```
 
+### Credentials for API-backed skills
+
+Many skills describe integrations (CRMs, spreadsheets, webhooks, SaaS APIs) that need OAuth tokens or API keys. To keep secrets out of chat and avoid scattering long-lived tokens across every project, you can use [**authsome**](https://github.com/manojbajaj95/authsome)—a local, encrypted credential store with refresh—and the companion [**Authsome skill**](https://github.com/manojbajaj95/authsome/blob/main/skills/authsome/SKILL.md) so the agent follows a safe login and `authsome run`-style injection flow instead of pasting keys into the session.
+
 ---
 
 ## Skills
