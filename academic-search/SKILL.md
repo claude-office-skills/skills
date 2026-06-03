@@ -4,7 +4,11 @@
 # ═══════════════════════════════════════════════════════════════════════════════
 
 name: academic-search
-description: "Search and analyze academic literature. Find papers, understand research methodologies, and synthesize academic findings for research projects."
+description: >-
+  This skill should be used when the user asks to "search academic literature", "find papers
+  on", "research a topic", "look up studies on", "find academic sources", "search scholarly
+  articles", or needs to discover, analyze, and synthesize academic papers across disciplines
+  for research projects.
 version: "1.0.0"
 author: claude-office-skills
 license: MIT
