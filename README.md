@@ -384,6 +384,7 @@ Based on workflow automation platforms.
 | **Email Marketing** | Multi-platform email automation | Multi | [View](./email-marketing/) |
 | **SEO Optimizer** | SEO strategy and optimization | - | [View](./seo-optimizer/) |
 | **Ads Copywriter** | Multi-platform ad copy generation | Multi | [View](./ads-copywriter/) |
+| **NotFair** | Open-source Claude Code skills for SEO, GEO, Google Ads, and Meta Ads — connects to live data via Google Ads MCP, Meta Ads MCP, Google Search Console MCP, and Google Analytics (GA4) MCP (~2.9k stars) | Multi | [View](https://github.com/nowork-studio/NotFair) |
 | **Social Publisher** | Cross-platform social publishing | Multi | [View](./social-publisher/) |
 
 ### E-commerce
