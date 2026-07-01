@@ -380,6 +380,7 @@ Based on workflow automation platforms.
 | **TikTok Marketing** | Content strategy, posting, analytics | TikTok | [View](./tiktok-marketing/) |
 | **LinkedIn Automation** | B2B marketing, lead generation | LinkedIn | [View](./linkedin-automation/) |
 | **Twitter/X Automation** | Social media management | Twitter | [View](./twitter-automation/) |
+| **Xquik Social Data** | X data workflows, monitoring, MCP, and webhooks | Xquik | [View](./xquik-social-data/) |
 | **Mailchimp Automation** | Email marketing campaigns | Mailchimp | [View](./mailchimp-automation/) |
 | **Email Marketing** | Multi-platform email automation | Multi | [View](./email-marketing/) |
 | **SEO Optimizer** | SEO strategy and optimization | - | [View](./seo-optimizer/) |
