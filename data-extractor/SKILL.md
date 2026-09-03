@@ -552,4 +552,5 @@ pip install "unstructured[docx,pptx,xlsx]"
 
 - [unstructured GitHub](https://github.com/Unstructured-IO/unstructured)
 - [Documentation](https://unstructured-io.github.io/unstructured/)
-- [Unstructured API](https://unstructured.io/api-key)
+- [Unstructured platform](https://platform.unstructured.io/) (the free hosted API was retired in April 2025)
+- [file2markdown MCP server](https://www.file2markdown.ai/mcp) — free hosted alternative for PDF/DOCX/PPTX/XLSX/HTML/URL to Markdown (5 conversions/day without a key)
