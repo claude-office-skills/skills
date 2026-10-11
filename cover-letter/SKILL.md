@@ -5,7 +5,7 @@
 
 # Basic Information
 name: cover-letter
-description: ">"
+description: "Draft, personalize, and format compelling professional cover letters tailored to specific job postings, career transitions, and roles using structured value propositions and quantified achievements."
 version: "1.0.0"
 author: Claude Office Skills Contributors
 license: MIT
